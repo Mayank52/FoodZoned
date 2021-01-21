@@ -1,0 +1,147 @@
+extends base.pug
+block header
+    .showcase
+        include homepageHeader.pug
+        .showcase-content
+            h1 MEAL PLANS.
+            h1
+                | FOR 
+                span#changing-text
+            .showcase-buttons
+                .btn Book Now
+                .btn-fade Show Me More
+
+block content
+    #features.section.features
+        .section-heading
+            h1 AWESOME FEATURES
+        hr
+        .section-body
+            .card
+                i.far.fa-calendar-plus.icon
+                .card-heading
+                    h2 365 DAYS/YEAR
+                .card-info
+                    | Never cook again! We really mean that. Our subscription plans
+                    | include up to 365 days/year coverage. You can also choose to order
+                    | more flexibly if that's your style.
+            .card
+                i.fas.fa-shipping-fast.icon
+                .card-heading
+                    h2 30 MINUTES OR FREE
+                .card-info
+                    | You're only twenty minutes away from your delicious and super
+                    | healthy meals delivered right to your home. We work with the best
+                    | chefs in each town to ensure that you're 100% happy.
+            .card
+                i.fas.fa-carrot.icon
+                .card-heading
+                    h2 100% ORGANIC
+                .card-info
+                    | All our vegetables are fresh, organic and local. Animals are raised
+                    | without added hormones or antibiotics. Good for your health, the
+                    | environment, and it also tastes better!
+    #steps.section.steps
+        .section-heading
+            h1 STEPS TO FOLLOW
+        hr
+        .section-body
+            img.steps-img(src='./images/foodApp.png' alt='')
+            .steps-to-follow
+                .list-item
+                    .step-number 1
+                    .step-desc
+                        | Choose the subscription plan that best fits your needs and sign up
+                        | today.
+                .list-item
+                    .step-number 2
+                    .step-desc
+                        | Order your delicious meal using our mobile app or website. Or you
+                        | can even call us!
+                .list-item
+                    .step-number 3
+                    .step-desc
+                        | Enjoy your meal after less than 20 minutes. See you the next time!
+    #reviews.section.reviews
+        .section-heading
+            h1 REVIEWS
+        hr
+        .section-body
+            .card
+                .card-heading
+                    h2 DAVID SMITH
+                .card-info
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
+                    | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
+                    | perferendis porro, iste voluptas!
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+            .card
+                .card-heading
+                    h2 DAVID SMITH
+                .card-info
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
+                    | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
+                    | perferendis porro, iste voluptas!
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+            .card
+                .card-heading
+                    h2 DAVID SMITH
+                .card-info
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
+                    | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
+                    | perferendis porro, iste voluptas!
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+    #pricing.section.pricing
+        .section-heading
+            h1 START EATING HEALTHY TODAY
+        hr
+        .section-body
+            each plan in plans
+                include planCard.pug
+    #contact.section.contact
+        .section-heading
+            h1 CONTACT US
+        hr
+        .section-body
+            .contact-img
+                video.bg-video__content(autoplay='' muted='' loop='')
+                    source(src='./images/Avocado.mp4' type='video/mp4')
+                    |             Your browser is not supported
+            .contact-form
+                .form-input
+                    label(for='') Name
+                    input(type='text')
+                .form-input
+                    label(for='') Email
+                    input(type='text')
+                .form-input
+                    label(for='') How did you find us?
+                    select(name='' id='')
+                        option(value='Friends') Friends
+                        option(value='Advertisement') Advertisement
+                        option(value='Other') Other
+                .form-input
+                    label(for='') Drop an equiry/feedback
+                    textarea(name='')
+                .form-input.accept-terms
+                    .checkbox
+                        input(type='checkbox' name='' id='')
+                    .conditions
+                        | I have read and agree with all the Privacy Policy and Terms &
+                        | Conditions.
+                .form-submit.btn SEND MESSAGE
+append scripts
+    script(src="https://js.stripe.com/v3/")
+    script(src="./js/buyPlan.js") 

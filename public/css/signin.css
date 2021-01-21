@@ -1,0 +1,161 @@
+i {
+  color: crimson;
+  transition: transform 0.3s;
+}
+i:hover {
+  transform: scale(1.4);
+}
+.overall-container {
+  /* background: darkorchid; */
+  background-image: linear-gradient(rgba(41, 41, 41, 0.596), rgb(0, 0, 0)),
+    url("../images/pexels-trang-doan-1092730.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+.parent-container {
+  display: flex;
+  width: 60%;
+  /* padding: 5% 0; */
+}
+.greetings-div {
+  background-color: crimson;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  padding: 20% 0;
+}
+.form-div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+}
+.signin-form,
+.signup-form {
+  width: 80%;
+}
+.signin-form .form-header {
+  font-size: 2rem;
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signin-form .form-heading {
+  margin-bottom: 5%;
+}
+.signin-form .signin-socials {
+  font-size: 2rem;
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  margin: 4% auto;
+}
+.signin-form .form-input {
+  width: 100%;
+  display: flex;
+  margin-bottom: 6%;
+}
+.signin-form .form-input label {
+  font-size: 1.4rem;
+  margin-bottom: 2%;
+}
+.signin-form .form-input input {
+  border: none;
+  font-size: 1.4rem;
+  padding: 2%;
+  background-color: #f1eded;
+  width: 100%;
+  outline: none;
+}
+.signin-form .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f63854;
+  color: white;
+  height: 50px;
+  border-radius: 30px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 40%;
+  border: none;
+  margin: 10% auto;
+  font-size: 1.3rem;
+}
+.btn-fade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  color: white;
+  height: 50px;
+  border-radius: 30px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 50%;
+  background-color: transparent;
+  margin: 10% auto;
+  font-size: 1.3rem;
+}
+
+.btn-fade:hover {
+  transform: scale(1.2);
+  background: #f63854;
+  color: white;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+.icon {
+  font-size: 1.5rem;
+  background-color: #f1eded;
+  padding: 0 2%;
+  display: flex;
+  align-items: center;
+}
+
+/* Text in center of a line */
+.strike {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 4%;
+}
+
+.strike > span {
+  position: relative;
+  display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: crimson;
+  opacity: 0.5;
+}
+
+.strike > span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.strike > span:after {
+  left: 100%;
+  margin-left: 15px;
+}

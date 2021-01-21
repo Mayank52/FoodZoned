@@ -1,0 +1,26 @@
+.pricing-card
+    .pricing-header
+        h3 #{plan.name}
+        .price-details
+            span.price $#{plan.price}
+            | /month
+            p That’s only #{Math.ceil(plan.price/plan.duration)}$ per meal
+    .pricing-body
+        ul
+            li
+                i.fas.fa-check
+                |                 1 meal every day
+            li
+                i.fas.fa-check
+                |                 Order 24/7
+            li
+                i.fas.fa-check
+                |                 Access to newest creations
+            li
+                i.fas.fa-check
+                |                 Free delivery
+            li
+                i.fas.fa-check  
+                |                 Rated #{plan.ratings} out of 10
+    .pricing-btn
+        button.btn(planId=`${plan["_id"]}`)  Buy Plan!

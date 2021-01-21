@@ -1,0 +1,15 @@
+extends base.pug
+block content
+    #pricing.section.pricing
+        .section-heading
+            h1 START EATING HEALTHY TODAY
+        hr
+        .section-body
+            each plan in plans
+                include planCard.pug
+append scripts
+    script(src="https://js.stripe.com/v3/")
+    script(src="./js/buyPlan.js")
+
+
+

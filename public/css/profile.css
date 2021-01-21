@@ -1,0 +1,151 @@
+.overall-container {
+  background-color: crimson;
+  display: flex;
+  justify-content: center;
+}
+.parent-container {
+  display: flex;
+  padding: 2%;
+  background-color: white;
+  width: 100%;
+}
+.left-container {
+  padding: 2%;
+  border-right: 0.5px solid grey;
+  width: 30%;
+}
+.right-container {
+  width: 70%;
+  padding: 2%;
+}
+.profile-img {
+  width: 90%;
+}
+.profile-img img {
+  border-radius: 50%;
+  width: 125px;
+  /* object-fit: contain; */
+  height: 125px;
+}
+
+.profile-img .img-overlay {
+
+}
+
+.profile-nav {
+  font-size: 1.3rem;
+}
+.navlist-item {
+  display: flex;
+  border-bottom: 1px solid;
+  justify-content: space-between;
+  padding: 3% 0;
+}
+.navlist-item:hover {
+  background: rgb(134, 143, 161);
+}
+.navitem-count {
+  background: bisque;
+  border-radius: 25px;
+  padding: 1%;
+  width: 20%;
+  text-align: center;
+}
+.profile-details {
+  font-size: 1.5rem;
+  width: 100%;
+}
+.profile-data {
+  padding: 1%;
+}
+.profile-data label {
+}
+.profile-data input {
+}
+
+/* Order-History */
+.order-history .heading {
+  margin-bottom: 4%;
+  margin-left: 1%;
+}
+.orders {
+  display: flex;
+  flex-wrap: wrap;
+}
+.order-card {
+  border: 1px solid;
+  text-align: left;
+  padding: 2%;
+  border-radius: 5%;
+  width: 30%;
+  margin: 1%;
+  padding-bottom: 0;
+  font-size: 1.3rem;
+  color: #808080;
+}
+.order-card:hover {
+  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+}
+.card-header {
+  border-bottom: 1px solid rgb(134, 143, 161);
+}
+.price-details {
+  padding: 8% 0;
+}
+.card-body {
+  padding: 5% 0;
+  font-size: 1.2rem;
+}
+.price {
+  font-size: 3rem;
+  color: #f63854;
+}
+.card-header h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.orders-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Reviews */
+.reviews {
+  display: flex;
+}
+.review {
+}
+
+.profile-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6%;
+}
+.profile-data label {
+  font-size: 1.4rem;
+  margin-bottom: 2%;
+}
+.profile-data input {
+  border: none;
+  font-size: 1.4rem;
+  padding: 2%;
+  background-color: #f1eded;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+}
+.btn {
+  margin: 2% auto;
+  width: 25%;
+}
+
+.hide {
+  display: none;
+}
+.no-border {
+  border: none;
+}
+.highlight {
+  background: #808080;
+}

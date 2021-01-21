@@ -1,0 +1,21 @@
+.navlinks
+  .link
+    a(href='/') HOME
+  .link
+    a(href='') FEATURES
+  .link
+    a(href='') DETAILS
+  .link
+    a(href='') REVIEWS
+  .link
+    a(href='/plans') PLANS
+  if name
+    .link
+      a(href="/profile") #{name}
+    .link
+      a(href='/logout') LOGOUT 
+  else
+    .link
+      a(href='/login') LOGIN
+
+                

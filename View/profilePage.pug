@@ -1,0 +1,138 @@
+extends base.pug  
+append stylesheets
+    link(rel="stylesheet" , href="./css/profile.css")
+block content
+    .overall-container
+        .parent-container
+            .left-container
+                .profile-img
+                    //- .img-overlay
+                    img(src=user.pImage alt='')
+                    //- .overlay-content
+                    //-     i.fas.fa-camera
+                    //-     |Edit
+                    input#profileImage(type='file' name='user')
+                .profile-nav
+                    #profile-details.navlist-item
+                        |Profile
+                        i.fas.fa-chevron-right
+                    #order-history.navlist-item
+                        |My Orders
+                        .navitem-count 12
+                    #reviews.navlist-item.no-border
+                        |My Reviews
+                        .navitem-count 10
+            .right-container
+                .profile-details
+                    .profile-data
+                        label(for='') Name
+                        input(type='text' placeholder='' readonly='' value=user.name)
+                    .profile-data
+                        label(for='') Email
+                        input(type='text' placeholder='' readonly='' value=user.email)
+                    .profile-data
+                        label(for='') Delivery Address
+                        input(type='text' placeholder='' readonly='' value=user.deliveryAddress)
+                    .profile-data
+                        label(for='') Contact
+                        input(type='text' placeholder='' readonly='' value=user.contact)
+                    .btn.edit-details Edit Details
+                    .btn.cancel.hide Cancel
+                    .btn.save-details.hide Save Details
+                .order-history.hide
+                    .heading
+                        h1 Your Order History
+                    .orders
+                        .order-card
+                            .card-header
+                                h3 PREMIUM
+                                .price-details
+                                    span.price $399
+                                    | /month
+                            .card-body
+                                .order-details
+                                    span Order Date : 
+                                    |  01-01-2020
+                                .order-details
+                                    span Quantity : 
+                                    |  2
+                        .order-card
+                            .card-header
+                                h3 PREMIUM
+                                .price-details
+                                    span.price $399
+                                    | /month
+                            .card-body
+                                .order-details
+                                    span Order Date : 
+                                    |  01-01-2020
+                                .order-details
+                                    span Quantity : 
+                                    |  2
+                        .order-card
+                            .card-header
+                                h3 PREMIUM
+                                .price-details
+                                    span.price $399
+                                    | /month
+                            .card-body
+                                .order-details
+                                    span Order Date : 
+                                    |  01-01-2020
+                                .order-details
+                                    span Quantity : 
+                                    |  2
+                        .order-card
+                            .card-header
+                                h3 PREMIUM
+                                .price-details
+                                    span.price $399
+                                    | /month
+                            .card-body
+                                .order-details
+                                    span Order Date : 
+                                    |  01-01-2020
+                                .order-details
+                                    span Quantity : 
+                                    |  2
+                .reviews.hide
+                    .card
+                        .card-heading
+                            h2 DAVID SMITH
+                        .card-info
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
+                            | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
+                            | perferendis porro, iste voluptas!
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star  
+                    .card
+                        .card-heading
+                            h2 DAVID SMITH
+                        .card-info
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
+                            | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
+                            | perferendis porro, iste voluptas!
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                    .card
+                        .card-heading
+                            h2 DAVID SMITH
+                        .card-info
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
+                            | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
+                            | perferendis porro, iste voluptas!
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+                        i.fas.fa-star.star
+
+block scripts
+    script(src="./js/profileImage.js")
+    script(src="./js/profile.js")
