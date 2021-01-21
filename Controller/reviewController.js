@@ -1,4 +1,3 @@
-const planModel = require("../Model/plansModel");
 const reviewModel = require("../Model/reviewModel");
 
 async function createReview(req, res) {
