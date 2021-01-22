@@ -1,3 +1,4 @@
+const planModel = require("../Model/plansModel");
 const reviewModel = require("../Model/reviewModel");
 
 async function createReview(req, res) {
@@ -5,12 +6,33 @@ async function createReview(req, res) {
     let sentReview = req.body;
     let review = await reviewModel.create(sentReview);
 
+    //update plan rating
+    try {
+      let { planId } = sentReview;
+      console.log(planId);
+      let plan = await planModel.findById(planId);
+      console.log(plan);
+      let { rating, totalReviews } = plan;
+      let newRating =
+        (rating * totalReviews + sentReview.rating) / (totalReviews + 1);
+      plan.rating = newRating;
+      plan.totalReviews = totalReviews + 1;
+
+      let updatedPlan = await plan.save();
+      console.log(plan);
+    } catch (error) {
+      res.status(501).json({
+        message: "Failed to update plan",
+        error,
+      });
+    }
+
     res.status(200).json({
       message: "Review Created Sucessfully!!",
       data: review,
     });
   } catch (error) {
-    res.status(501).json({
+    res.status(500).json({
       message: "Failed to create review.",
       error,
     });
@@ -22,16 +44,26 @@ async function updateReviewById(req, res) {
     let id = req.params.id;
     let { updateObj } = req.body;
     let review = await reviewModel.findById(id);
+    let newRating = updateObj.rating;
+    let oldRating = review.rating;
     console.log(review);
 
     for (key in updateObj) {
       review[key] = updateObj[key];
     }
 
+    //update plan rating
+    let { planId } = review;
+    let plan = await planModel.findById(planId);
+    let { rating, totalReviews } = plan;
+    let updatedRating = (rating * totalReviews + newRating - oldRating) / totalReviews;
+    plan.rating = updatedRating;
+    let updatedPlan = await plan.save();
+
     let updatedReview = await review.save();
 
     res.status(200).json({
-      message: "Review Update Sucessfully!!",
+      message: "Review Updated Sucessfully!!",
       data: updatedReview,
     });
   } catch (error) {
