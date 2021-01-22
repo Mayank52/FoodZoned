@@ -1,3 +1,4 @@
 Do Front End part of reviews
 Add Admin Features
 Change the design
+Plan Page Design : Like Amazon Items => List on left, Details, comments on right

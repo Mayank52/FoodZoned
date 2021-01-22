@@ -6,11 +6,7 @@ block content
         .parent-container
             .left-container
                 .profile-img
-                    //- .img-overlay
                     img(src=user.pImage alt='')
-                    //- .overlay-content
-                    //-     i.fas.fa-camera
-                    //-     |Edit
                     input#profileImage(type='file' name='user')
                 .profile-nav
                     #profile-details.navlist-item
@@ -18,10 +14,10 @@ block content
                         i.fas.fa-chevron-right
                     #order-history.navlist-item
                         |My Orders
-                        .navitem-count 12
+                        .navitem-count #{orders.length}
                     #reviews.navlist-item.no-border
                         |My Reviews
-                        .navitem-count 10
+                        .navitem-count #{reviews.length}
             .right-container
                 .profile-details
                     .profile-data
@@ -43,95 +39,17 @@ block content
                     .heading
                         h1 Your Order History
                     .orders
-                        .order-card
-                            .card-header
-                                h3 PREMIUM
-                                .price-details
-                                    span.price $399
-                                    | /month
-                            .card-body
-                                .order-details
-                                    span Order Date : 
-                                    |  01-01-2020
-                                .order-details
-                                    span Quantity : 
-                                    |  2
-                        .order-card
-                            .card-header
-                                h3 PREMIUM
-                                .price-details
-                                    span.price $399
-                                    | /month
-                            .card-body
-                                .order-details
-                                    span Order Date : 
-                                    |  01-01-2020
-                                .order-details
-                                    span Quantity : 
-                                    |  2
-                        .order-card
-                            .card-header
-                                h3 PREMIUM
-                                .price-details
-                                    span.price $399
-                                    | /month
-                            .card-body
-                                .order-details
-                                    span Order Date : 
-                                    |  01-01-2020
-                                .order-details
-                                    span Quantity : 
-                                    |  2
-                        .order-card
-                            .card-header
-                                h3 PREMIUM
-                                .price-details
-                                    span.price $399
-                                    | /month
-                            .card-body
-                                .order-details
-                                    span Order Date : 
-                                    |  01-01-2020
-                                .order-details
-                                    span Quantity : 
-                                    |  2
+                        if orders.length>0
+                            each order in orders
+                                include orderCard.pug
+                        else
+                            h2 No Orders
                 .reviews.hide
-                    .card
-                        .card-heading
-                            h2 DAVID SMITH
-                        .card-info
-                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
-                            | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
-                            | perferendis porro, iste voluptas!
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star  
-                    .card
-                        .card-heading
-                            h2 DAVID SMITH
-                        .card-info
-                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
-                            | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
-                            | perferendis porro, iste voluptas!
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                    .card
-                        .card-heading
-                            h2 DAVID SMITH
-                        .card-info
-                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
-                            | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
-                            | perferendis porro, iste voluptas!
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
-                        i.fas.fa-star.star
+                    if reviews.length>0
+                        each review in reviews
+                            include reviewCard.pug
+                    else
+                        | No Reviews
 
 block scripts
     script(src="./js/profileImage.js")

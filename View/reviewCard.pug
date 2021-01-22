@@ -1,0 +1,8 @@
+.card
+    .card-heading
+        h2 #{user.name}
+    .card-info
+        | #{review.review}
+    - for(let i=0; i< review.rating; i++){
+        i.fas.fa-star.star
+    - }

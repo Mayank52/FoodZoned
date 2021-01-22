@@ -1,0 +1,13 @@
+.order-card
+    .card-header
+        h3 #{order.name}
+        .price-details
+            span.price $#{order.currentPrice}
+            | /month
+    .card-body
+        .order-details
+            span Order Date : 
+            |  #{order.bookedOn}
+        .order-details
+            span Quantity : 
+            |  1
