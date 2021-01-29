@@ -1,44 +1,62 @@
-const FOCUSABLE_SELECTORS =
-  "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+let leftArrow = document.querySelector(".left-arrow i");
+let rightArrow = document.querySelector(".right-arrow i");
+let displayImg = document.querySelector(".display-img img");
+let allImgDivs = document.querySelectorAll(".preview-img");
+let allImgTags = document.querySelectorAll(".preview-img img");
+let closeBtn = document.querySelector(".close");
+let modalDiv = document.querySelector(".modal");
+let displayDetails = document.querySelectorAll(".details-btn");
 
-const openModalBtn = document.querySelector(".open-modal");
-const closeModalBtn = document.querySelector(".close-modal");
-const modal = document.querySelector(".modal");
-const main = document.querySelector("main");
+let activeImgIdx = 0;
 
-function openModal() {
-  // show the modal
-  modal.style.display = "flex";
+displayDetails.forEach((showBtn) => {
+  showBtn.addEventListener("click", () => {
+    modalDiv.style.display = "flex";
+  });
+});
 
-  // Focus the first element within the modal. Make sure the element is visible and doesnt have focus disabled (tabindex=-1);
-  modal.querySelector(FOCUSABLE_SELECTORS).focus();
+function changeActiveImg() {
+  //set the new display img
+  let newDisplayImgSrc = allImgTags[activeImgIdx].src;
+  displayImg.setAttribute("src", newDisplayImgSrc);
 
-  // Trap the tab focus by disable tabbing on all elements outside of your modal.  Because the modal is a sibling of main, this is easier.
-  // Make sure to check if the element is visible, or already has a tabindex so you can restore it when you untrap.
-  const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
-  focusableElements.forEach((el) => el.setAttribute("tabindex", "-1"));
+  //highlight the new preview
+  allImgDivs.forEach((el) => {
+    if (el.classList.contains("active-img")) el.classList.remove("active-img");
+  });
 
-  // Trap the screen reader focus as well with aria roles. This is much easier as our main and modal elements are siblings,
-  // otherwise you'd have to set aria-hidden on every screen reader focusable element not in the modal.
-  modal.removeAttribute("aria-hidden");
-  main.setAttribute("aria-hidden", "true");
+  allImgDivs[activeImgIdx].classList.add("active-img");
 }
 
-function closeModal() {
-  // hide the modal
-  modal.style.display = "none";
+leftArrow.addEventListener("click", () => {
+  //get the new img
+  activeImgIdx = (activeImgIdx - 1 + allImgDivs.length) % allImgDivs.length;
 
-  // Untrap the tab focus by removing tabindex=-1. You should restore previous values if an element had them.
-  const focusableElements = main.querySelectorAll(FOCUSABLE_SELECTORS);
-  focusableElements.forEach((el) => el.removeAttribute("tabindex"));
+  changeActiveImg();
+});
 
-  // Untrap screen reader focus
-  modal.setAttribute("aria-hidden", "true");
-  main.removeAttribute("aria-hidden");
+rightArrow.addEventListener("click", () => {
+  //get the new img
+  activeImgIdx = (activeImgIdx + 1) % allImgDivs.length;
 
-  // restore focus to the triggering element
-  openModalBtn.focus();
+  changeActiveImg();
+});
+
+for (let i = 0; i < allImgDivs.length; i++) {
+  allImgDivs[i].addEventListener("click", () => {
+    activeImgIdx = i;
+    changeActiveImg();
+  });
 }
 
-openModalBtn.addEventListener("click", openModal);
-closeModalBtn.addEventListener("click", closeModal);
+closeBtn.addEventListener("click", () => {
+  modalDiv.style.display = "none";
+  for (let i = 0; i < 5; i++) {
+    stars[i].style.color = "lightgray";
+  }
+  reviewsDiv.innerHTML="No Reviews"; 
+});
+
+window.addEventListener("load", () => {
+  modalDiv.style.display = "none";
+});

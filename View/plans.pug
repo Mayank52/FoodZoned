@@ -1,8 +1,8 @@
 extends base.pug
 
 append stylesheets
-    link(rel='stylesheet' href='./css/planDetails.css')
     link(rel='stylesheet' href='./css/plans.css')
+    link(rel='stylesheet' href='./css/planDetails.css')
 block content
     include planDetails.pug
     #pricing.section.pricing
@@ -13,9 +13,11 @@ block content
             each plan in plans
                 include planCard.pug
                 //- include planDetails.pug
-append scripts
+block scripts
     script(src="https://js.stripe.com/v3/")
     script(src="./js/buyPlan.js")
+    script(src='./js/planDetails.js')
+    script(src='./js/modal.js')
 
 
 
