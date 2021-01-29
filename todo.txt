@@ -3,3 +3,6 @@ Add Admin Features
 Change the design
 Plan Page Design : Like Amazon Items => List on left, Details, comments on right
 OR Another window on the same page like an overlay
+
+Plans Page Design
+Crimson background with white cards with overlay on button clicks

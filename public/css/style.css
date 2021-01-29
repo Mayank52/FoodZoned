@@ -5,7 +5,7 @@
   font-family: "Lato", sans-serif;
   scroll-behavior: smooth;
 }
-html{
+html {
   min-height: 100%;
 }
 
@@ -47,13 +47,13 @@ a {
   padding-bottom: -1px;
 }
 .fixed {
-  background: white;  
+  background: white;
   position: fixed;
   width: 100%;
   z-index: 2;
 }
-.fixed1{
-  background: white;  
+.fixed1 {
+  background: white;
   /* position: fixed; */
   width: 100%;
 }
@@ -64,37 +64,7 @@ a {
 .fixed a {
   color: #f63854;
 }
-/* SHOWCASE */
-#changing-text {
-  color: #f63854;
-}
 
-.showcase {
-  background-image: linear-gradient(rgba(41, 41, 41, 0.596), rgb(0, 0, 0)),
-    url("../images/pexels-trang-doan-1092730.jpg");
-  height: 100vh;
-  background-size: 100vw;
-  background-attachment: fixed;
-}
-
-.showcase-content {
-  position: absolute;
-  top: 30%;
-  left: 15%;
-}
-
-.showcase-content h1 {
-  color: white;
-  font-size: 400%;
-}
-
-.showcase-buttons {
-  margin-top: 20px;
-  display: flex;
-  width: 300px;
-  height: 50px;
-  justify-content: space-between;
-}
 .btn {
   display: flex;
   align-items: center;
@@ -133,223 +103,6 @@ a {
 .btn:hover {
   transform: scale(1.2);
 }
-.section {
-  text-align: center;
-  padding: 3% 3%;
-  /* height: 80vh; */
-}
-.section-body {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 3%;
-  flex-wrap: wrap;
-}
-.section-heading {
-  color: #808080;
-}
-
-/* FEATURES */
-.card {
-  text-align: center;
-  padding: 2%;
-  width: 30%;
-  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
-  margin: 4% 0;
-  color: #808080;
-  line-height: 1.6rem;
-  word-spacing: 0.2rem;
-}
-.card-heading {
-  margin: 5% 0;
-}
-.card-info {
-  font-size: 20px;
-}
-.icon {
-  color: #f63854;
-  font-size: 3.8rem;
-}
-
-/* STEP TO FOLLOW */
-.steps {
-  background-color: rgb(244, 244, 244);
-}
-.steps-to-follow {
-  width: 50%;
-}
-.steps-img {
-  margin: auto 0;
-  width: 17%;
-}
-.list-item {
-  display: flex;
-  margin: 10% 0;
-}
-.step-number {
-  height: 4rem;
-  border-radius: 50%;
-  border: 3px solid #f63854;
-  font-size: 2.5rem;
-  width: 4rem;
-  color: #f63854;
-  margin-right: 1%;
-  padding-top: 0.2rem;
-}
-.step-desc {
-  padding: 2%;
-  font-size: 1.2rem;
-}
-
-/* REVIEWS */
-.star {
-  color: #f63854;
-  font-size: 1.2rem;
-  margin-right: 3%;
-}
-.reviews {
-  background-image: linear-gradient(rgba(41, 41, 41, 0.596), rgb(0, 0, 0)),
-    url("../images/pexels-trang-doan-1092730.jpg");
-  background-size: 100vw;
-  background-attachment: fixed;
-}
-.reviews .card {
-  padding: 3%;
-  background-color: azure;
-}
-.reviews .card-info {
-  margin: 5% 0px;
-  font-size: 1.1rem;
-}
-.reviews .card-heading h2 {
-  color: #000000;
-  font-weight: 100;
-  font-size: 1.7rem;
-}
-
-/* PRICING */
-.pricing {
-  background-color: #f4f4f4;
-  padding-bottom: 7%;
-}
-.pricing hr {
-  margin-bottom: 5%;
-}
-.pricing-card {
-  border: 1px solid;
-  text-align: left;
-  padding: 2%;
-  border-radius: 5%;
-  width: 30%;
-  padding-bottom: 0;
-  transform: scale(0.9);
-  font-size: 1.3rem;
-  color: #808080;
-}
-.active-card {
-  transform: scale(1.1);
-  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
-}
-.pricing-header {
-  border-bottom: 1px solid rgb(134, 143, 161);
-  /* padding-bottom: 5%; */
-}
-.price-details {
-  padding: 8% 0;
-}
-.pricing-body {
-  padding: 5% 0;
-  font-size: 1.2rem;
-  border-bottom: 1px solid rgb(134, 143, 161);
-}
-.price {
-  font-size: 3rem;
-  color: #f63854;
-}
-.pricing-header h3 {
-  text-align: center;
-  font-size: 1.5rem;
-}
-.pricing-card hr {
-  border: 1px solid #808080;
-  background-color: #808080;
-  width: 95%;
-}
-.pricing-card ul {
-  list-style: none;
-}
-.pricing-card li {
-  margin: 4% 0;
-}
-.pricing-card li i {
-  margin-right: 2%;
-  color: #f63854;
-}
-.pricing-btn {
-  width: 50%;
-  margin: 0 auto;
-}
-.pricing-btn .btn {
-  position: relative;
-  top: 25px;
-  width: 100%;
-  border: none;
-  font-size: 1.3rem;
-}
-
-/* CONTACT US */
-.contact {
-  background-color: #212529;
-  color: #808080;
-}
-.contact-img {
-  width: 50%;
-}
-.contact-img video {
-  width: 80%;
-}
-.contact-form {
-  text-align: left;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding: 2%;
-}
-.contact-form .form-input {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3%;
-}
-.contact-form .form-input input {
-  font-size: 1.2rem;
-  padding: 1%;
-  background-color: #f1eded;
-  width: 100%;
-}
-.contact-form label {
-  font-size: 1.4rem;
-}
-textarea {
-  height: 7rem;
-  background-color: #f1eded;
-  border-radius: 6px;
-}
-.form-submit.btn {
-  margin: 3% auto;
-  width: 30%;
-}
-.contact-form .form-input select {
-  background-color: #f1eded;
-  font-size: 1.2rem;
-  padding: 1%;
-  border-radius: 6px;
-}
-.form-input .checkbox {
-  margin-right: 1%;
-}
-.form-input.accept-terms {
-  flex-direction: row;
-}
 
 /* FOOTER */
 footer {
@@ -371,47 +124,6 @@ footer p {
   padding-bottom: 0;
 }
 
-/* LOGIN PAGE CSS */
-.heading {
-  background-color: white;
-  font-size: 225%;
-  text-transform: uppercase;
-  font-weight: 700;
-  background-image: linear-gradient(to right, #ff0844, #ffb199);
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.1rem;
-  line-height: 1.3;
-  display: inline-block;
-  margin-bottom: 5%;
-}
-.login {
-  /* padding: 5%; */
-  width: 60%;
-  margin: 3.4% auto;
-}
-.login-form {
-  display: flex;
-  flex-direction: column;
-}
-.login-form .form-input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2%;
-}
-.login-form .form-input input {
-  padding: 1%;
-  border: none;
-  background-color: cornsilk;
-  width: 100%;
-  border-radius: 6px;
-  font-size: 1.4rem;
-}
-.login-form label{
-  font-size: 1.5rem;
-  margin: 2% 0;
-}
-.login-form .btn{
-  margin: 2% auto;
-  font-size: 1.5rem;
+.hide {
+  display: none;
 }

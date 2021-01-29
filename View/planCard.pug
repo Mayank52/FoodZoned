@@ -24,3 +24,7 @@
                 |                 Rated #{plan.ratings} out of 10
     .pricing-btn
         button.btn(planId=`${plan["_id"]}`)  Buy Plan!
+    .details-btn
+        button.btn(href="planDetails.pug" planId=`${plan["_id"]}`)  Check Details
+    
+    

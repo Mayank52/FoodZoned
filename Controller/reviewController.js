@@ -7,25 +7,15 @@ async function createReview(req, res) {
     let review = await reviewModel.create(sentReview);
 
     //update plan rating
-    try {
-      let { planId } = sentReview;
-      console.log(planId);
-      let plan = await planModel.findById(planId);
-      console.log(plan);
-      let { rating, totalReviews } = plan;
-      let newRating =
-        (rating * totalReviews + sentReview.rating) / (totalReviews + 1);
-      plan.rating = newRating;
-      plan.totalReviews = totalReviews + 1;
+    let { planId } = sentReview;
+    let plan = await planModel.findById(planId);
+    let { rating, totalReviews } = plan;
+    let newRating =
+      (rating * totalReviews + sentReview.rating) / (totalReviews + 1);
+    plan.rating = newRating;
+    plan.totalReviews = totalReviews + 1;
 
-      let updatedPlan = await plan.save();
-      console.log(plan);
-    } catch (error) {
-      res.status(501).json({
-        message: "Failed to update plan",
-        error,
-      });
-    }
+    let updatedPlan = await plan.save();
 
     res.status(200).json({
       message: "Review Created Sucessfully!!",
@@ -56,7 +46,8 @@ async function updateReviewById(req, res) {
     let { planId } = review;
     let plan = await planModel.findById(planId);
     let { rating, totalReviews } = plan;
-    let updatedRating = (rating * totalReviews + newRating - oldRating) / totalReviews;
+    let updatedRating =
+      (rating * totalReviews + newRating - oldRating) / totalReviews;
     plan.rating = updatedRating;
     let updatedPlan = await plan.save();
 

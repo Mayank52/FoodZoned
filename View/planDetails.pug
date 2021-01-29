@@ -1,6 +1,108 @@
-extends base.pug
-append stylesheets
-
-block content
-
-block scripts
+.overall
+  .overlay-container
+    .close
+      i.fas.fa-times
+    .plan
+      .left-container
+        .img-preview
+          .left-arrow
+            i.fas.fa-chevron-left
+          .plan-img
+            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+          .right-arrow
+            i.fas.fa-chevron-right
+        .img-scroll
+          .small-img
+            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+          .small-img
+            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+          .small-img
+            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+          .small-img
+            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+          .small-img
+            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+      .right-container
+        .plan-details
+          .name Continental Delight
+          .rating
+            .stars
+              i.fas.fa-star.star
+              i.fas.fa-star.star
+              i.fas.fa-star.star
+              i.fas.fa-star.star
+            .review-count
+              span.count 3233
+              |                   Reviews
+          .tagline
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit
+          .price
+            | Price: 
+            span.price-amount $200.99
+            | /month
+          hr
+          .description
+            ul
+              li
+                i.fas.fa-check
+                |                     1 meal every day
+              li
+                i.fas.fa-check
+                |                     Order 24/7
+              li
+                i.fas.fa-check
+                |                     Access to newest creations
+              li
+                i.fas.fa-check
+                |                     Free delivery
+        button.buy-btn Buy Now!
+    .reviews
+      h1 Reviews
+      .review
+        .user
+          .username Steve Rogers
+          .date 2020-02-19
+        .review-stars
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+        .review-text
+          | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+          | saepe, eligendi blanditiis delectus doloribus natus enim, soluta
+          | ducimus quam libero quasi commodi debitis ab necessitatibus Lorem
+          | ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+          | saepe, eligendi blanditiis delectus doloribus natus enim, soluta
+          | ducimus quam libero quasi commodi debitis ab necessitatibus
+      .review
+        .user
+          .username Steve Rogers
+          .date 2020-02-19
+        .review-stars
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+        .review-text
+          | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+          | saepe, eligendi blanditiis delectus doloribus natus enim, soluta
+          | ducimus quam libero quasi commodi debitis ab necessitatibus Lorem
+          | ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+          | saepe, eligendi blanditiis delectus doloribus natus enim, soluta
+          | ducimus quam libero quasi commodi debitis ab necessitatibus
+      .review
+        .user
+          .username Steve Rogers
+          .date 2020-02-19
+        .review-stars
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+          i.fas.fa-star.star
+        .review-text
+          | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+          | saepe, eligendi blanditiis delectus doloribus natus enim, soluta
+          | ducimus quam libero quasi commodi debitis ab necessitatibus Lorem
+          | ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+          | saepe, eligendi blanditiis delectus doloribus natus enim, soluta
+          | ducimus quam libero quasi commodi debitis ab necessitatibus
