@@ -1,6 +1,10 @@
 .card
     .card-heading
         h2 #{user.name}
+    .delete-review
+        button.btn(reviewid=`${review._id}`) Delete
+    .edit-review
+        button.btn(reviewid=`${review._id}`) Edit
     .card-info
         | #{review.review}
     - for(let i=0; i< review.rating; i++){

@@ -1,17 +1,38 @@
 const planModel = require("../Model/plansModel");
 const reviewModel = require("../Model/reviewModel");
+const userModel = require("../Model/usersModel");
 
 async function createReview(req, res) {
   try {
     let sentReview = req.body;
+    console.log("Review0: ", sentReview);
+
+    let userId = req.id;
+    let user = await userModel.findById(userId);
+    sentReview.userId = userId;
+    sentReview.username = user.name;
+    console.log("Review1: ", sentReview);
+
     let review = await reviewModel.create(sentReview);
 
     //update plan rating
     let { planId } = sentReview;
     let plan = await planModel.findById(planId);
     let { rating, totalReviews } = plan;
+
+    console.log(rating, totalReviews, sentReview.rating);
+
     let newRating =
-      (rating * totalReviews + sentReview.rating) / (totalReviews + 1);
+      (rating * totalReviews + parseInt(sentReview.rating)) /
+      (totalReviews + 1);
+
+    console.log(
+      rating * totalReviews,
+      rating * totalReviews + sentReview.rating
+    );
+
+    console.log(newRating);
+
     plan.rating = newRating;
     plan.totalReviews = totalReviews + 1;
 

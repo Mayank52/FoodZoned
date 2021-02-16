@@ -112,8 +112,12 @@
 /* Reviews */
 .reviews {
   display: flex;
+  flex-wrap: wrap;
 }
 .review {
+}
+.card{
+  width: 30%;
 }
 
 .profile-details {

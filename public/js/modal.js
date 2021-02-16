@@ -3,17 +3,17 @@ let rightArrow = document.querySelector(".right-arrow i");
 let displayImg = document.querySelector(".display-img img");
 let allImgDivs = document.querySelectorAll(".preview-img");
 let allImgTags = document.querySelectorAll(".preview-img img");
-let closeBtn = document.querySelector(".close");
-let modalDiv = document.querySelector(".modal");
-let displayDetails = document.querySelectorAll(".details-btn");
+// let closeBtn = document.querySelector(".close");
+// let modalDiv = document.querySelector(".modal");
+// let displayDetails = document.querySelectorAll(".details-btn");
 
 let activeImgIdx = 0;
 
-displayDetails.forEach((showBtn) => {
-  showBtn.addEventListener("click", () => {
-    modalDiv.style.display = "flex";
-  });
-});
+// displayDetails.forEach((showBtn) => {
+//   showBtn.addEventListener("click", () => {
+//     modalDiv.style.display = "flex";
+//   });
+// });
 
 function changeActiveImg() {
   //set the new display img
@@ -49,14 +49,14 @@ for (let i = 0; i < allImgDivs.length; i++) {
   });
 }
 
-closeBtn.addEventListener("click", () => {
-  modalDiv.style.display = "none";
-  for (let i = 0; i < 5; i++) {
-    stars[i].style.color = "lightgray";
-  }
-  reviewsDiv.innerHTML="No Reviews"; 
-});
+// closeBtn.addEventListener("click", () => {
+//   modalDiv.style.display = "none";
+//   for (let i = 0; i < 5; i++) {
+//     stars[i].style.color = "lightgray";
+//   }
+//   reviewsDiv.innerHTML="No Reviews"; 
+// });
 
-window.addEventListener("load", () => {
-  modalDiv.style.display = "none";
-});
+// window.addEventListener("load", () => {
+//   modalDiv.style.display = "none";
+// });

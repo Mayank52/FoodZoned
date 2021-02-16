@@ -1,62 +1,92 @@
-.modal
-  .overlay-container
-    .close
-      i.fas.fa-times
-    .plan
-      .left-container
-        .img-preview
-          .left-arrow
-            i.fas.fa-chevron-left
-          .display-img
-            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
-          .right-arrow
-            i.fas.fa-chevron-right
-        .img-scroll
-          .preview-img.active-img
-            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
-          .preview-img
-            img(src='./images/foodApp.png' alt='')
-          .preview-img
-            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
-          .preview-img
-            img(src='./images/foodApp.png' alt='')
-          .preview-img
-            img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
-      .right-container
-        .plan-details
-          .name Continental Delight
-          .rating
-            .stars
-              i.fas.fa-star.star
-              i.fas.fa-star.star
-              i.fas.fa-star.star
-              i.fas.fa-star.star
-              i.fas.fa-star.star
-            .review-count
-              span.count 3233
-              |                   Reviews
-          .tagline
-            | Lorem ipsum dolor sit amet consectetur adipisicing elit
-          .price
-            | Price: 
-            span.price-amount $200.99
-            | /month
-          hr
-          .description
-            ul
-              li
-                i.fas.fa-check
-                |                     1 meal every day
-              li
-                i.fas.fa-check
-                |                     Order 24/7
-              li
-                i.fas.fa-check
-                |                     Access to newest creations
-              li
-                i.fas.fa-check
-                |                     Free delivery
-        button.buy-btn Buy Now!
-    h1 Reviews
-    .reviews
-      | No Reviews 
+extends base.pug
+
+append stylesheets
+  link(rel='stylesheet' href='../css/planDetails.css')
+
+block content
+  .parent-container
+    .plan-nav
+      h1 Available Plans
+      .plan-list
+        each plan in plans
+          .plan-item(id = `${plan._id}`)  #{plan.name} 
+
+    .details
+      .plan
+        .left-container
+          .img-preview
+            .left-arrow
+              i.fas.fa-chevron-left
+            .display-img
+              img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+            .right-arrow
+              i.fas.fa-chevron-right
+          .img-scroll
+            .preview-img.active-img
+              img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+            .preview-img
+              img(src='./images/foodApp.png' alt='')
+            .preview-img
+              img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+            .preview-img
+              img(src='./images/foodApp.png' alt='')
+            .preview-img
+              img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+        .right-container
+          .plan-details
+            .name
+            .rating
+              .stars
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+                i.fas.fa-star.star
+              .review-count
+                span.count
+                |                   Reviews
+            .tagline
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit
+            .price
+              | Price: 
+              span.price-amount
+              | /month
+            hr
+            .description
+              ul
+                li
+                  i.fas.fa-check
+                  |                     1 meal every day
+                li
+                  i.fas.fa-check
+                  |                     Order 24/7
+                li
+                  i.fas.fa-check
+                  |                     Access to newest creations
+                li
+                  i.fas.fa-check
+                  |                     Free delivery
+          //- button.buy-btn Buy Now!
+          .pricing-btn
+            button.btn.buy-btn  Buy Plan!
+      .reviews
+        h1 Reviews
+        | No Reviews
+      .add-review
+        textarea(cols="30", rows="10" class="new-review")
+        .new-review-rating
+          | Rating: 
+          select
+            option(value='1') 1
+            option(value='2') 2
+            option(value='3') 3
+            option(value='4') 4
+            option(value='5') 5
+
+        button.btn.add-review Add Review
+        
+block scripts
+  script(src="https://js.stripe.com/v3/")
+  script(src="./js/buyPlan.js")
+  script(src='./js/planDetails.js')
+  script(src='./js/modal.js')
+  script(src='./js/addReview.js')

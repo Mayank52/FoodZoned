@@ -25,7 +25,6 @@
     .pricing-btn
         button.btn(planId=`${plan["_id"]}`)  Buy Plan!
     .details-btn
-        button.btn(href="planDetails.pug" planId=`${plan["_id"]}`)  Check Details
-    //- include planDetails.pug
+        button.btn(href='/planDetails' planId=`${plan["_id"]}`)  Check Details
     
     

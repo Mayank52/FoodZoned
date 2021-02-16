@@ -1,6 +1,6 @@
 const express = require("express");
 const { isLoggedIn , logout } = require("../Controller/authController");
-const { getHomePage, getLoginPage, getSignUpPage, getPlansPage , getResetPasswordPage  , getProfilePage, getReviewsPage} = require("../Controller/viewController");
+const { getHomePage, getLoginPage, getSignUpPage, getPlansPage , getResetPasswordPage  , getProfilePage, getReviewsPage, getPlanDetailsPage} = require("../Controller/viewController");
 
 const viewRouter = express.Router();
 
@@ -15,6 +15,7 @@ viewRouter.route("/signup").get(getSignUpPage);
 viewRouter.route("/plans").get(getPlansPage);
 viewRouter.route("/profile").get(getProfilePage);
 viewRouter.route("/reviews").get(getReviewsPage);
+viewRouter.route("/planDetails").get(getPlanDetailsPage);
 
 
 module.exports = viewRouter;

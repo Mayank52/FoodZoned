@@ -10,7 +10,10 @@ const {
 } = require("../Controller/reviewController");
 const reviewRouter = express.Router();
 
-reviewRouter.route("").get(protectRoute, getAllReviews).post(protectRoute, createReview);
+reviewRouter
+  .route("")
+  .get(protectRoute, getAllReviews)
+  .post(protectRoute, createReview);
 reviewRouter
   .route("/:id")
   .patch(protectRoute, updateReviewById)

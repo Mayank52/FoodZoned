@@ -1,3 +1,6 @@
+EITHER MAKE THE USER LOGIN AT LANDING PAGE OR ALLOW ACCESS WITHOUT LOGIN TO AVAILABLE PLANS
+
+-> Delete, Update Reviews Frontend(Can be done from profile section)
 Do Front End part of reviews
 Add Admin Features
 Change the design
