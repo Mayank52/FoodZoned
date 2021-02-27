@@ -52,13 +52,13 @@ ul {
   padding-bottom: -1px;
 }
 .fixed {
-  background: white;
+  background: #1e2022;
   position: fixed;
   width: 100%;
   z-index: 2;
 }
 .fixed1 {
-  background: white;
+  background: #1e2022;
   /* position: fixed; */
   width: 100%;
 }

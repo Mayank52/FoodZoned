@@ -1,0 +1,259 @@
+body {
+  /* background-image: linear-gradient(rgba(41, 41, 41, 0.596), rgb(0, 0, 0)),
+  url("../images/pexels-trang-doan-1092730.jpg");
+  height: 100vh;
+  background-size: 100vw;
+  background-attachment: fixed; */
+  background-color: #1e2022;
+}
+hr {
+  color: #f63854;
+  width: 25%;
+  margin: 1% auto;
+  border: 1.5px solid #f63854;
+  background-color: #f63854;
+}
+/* SHOWCASE */
+#changing-text {
+  color: #f63854;
+}
+
+.showcase {
+  /* background-image: linear-gradient(rgba(41, 41, 41, 0.596), rgb(0, 0, 0)),
+    url("../images/pexels-trang-doan-1092730.jpg"); */
+  height: 20vh;
+  /* background-size: 100vw; */
+  /* background-attachment: fixed; */
+  background-color: #f63854;
+}
+
+.showcase-content {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: absolute;
+  top: 12%;
+  /* left: 15%; */
+}
+.showcase-center {
+  display: flex;
+  justify-content: center;
+}
+.showcase-content h1 {
+  color: white;
+  font-size: 400%;
+}
+
+.arrow-btn {
+  color: #f63854;
+  text-align: center;
+  position: absolute;
+  bottom: 4%;
+  margin: 0 auto;
+}
+.arrow-btn i {
+  font-size: 2rem;
+}
+
+/* Special div */
+.top-picks {
+  /* background-color: #000000; */
+  /* color: white; */
+  /* margin: 2% 0; */
+  padding: 2% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top-picks h1 {
+  /* padding: 5% 0; */
+  text-align: center;
+  color: #fc5b5b;
+}
+.plan-name {
+  /* position: relative; */
+  width: 25%;
+  height: 350px;
+  background-color: white;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* left: 5%; */
+}
+.image-div {
+  /* width: 100%; */
+}
+.plan-name img {
+  width: 100%;
+  height: 350px;
+  /* object-fit: contain; */
+  filter: brightness(0.5);
+}
+.name-div {
+  position: absolute;
+  color: #ffffff;
+  padding: 0 10%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.special-div {
+  display: flex;
+  margin: 2% 2% 2% 6%;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+}
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 350px;
+  /* box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1); */
+  margin: auto 0;
+  padding: 0 3% 0 8%;
+  text-align: center;
+  /* background-color: white; */
+  color: #f63854;
+}
+.user-name {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 4%;
+  font-size: 1.3rem;
+  
+}
+.review-card i {
+  font-size: 2rem;
+  /* color: #f63854; */
+  margin-bottom: 4%;
+}
+.review {
+  font-size: 1.3rem;
+  /* color: #f63854; */
+}
+.boxxed {
+  border: 2px solid #f63854;
+  background: transparent;
+  padding: 8%;
+}
+
+.left-card {
+  position: relative;
+  left: 5%;
+}
+.right-card {
+  position: relative;
+  right: 5%;
+}
+
+.pricing-card {
+  border: 1px solid;
+  text-align: left;
+  padding: 2%;
+  border-radius: 5%;
+  width: 28%;
+  padding-bottom: 0;
+  /* transform: scale(0.9); */
+  font-size: 1.3rem;
+  color: white;
+  background-color: #f63854;
+  /* transform: scale(1.1); */
+  z-index: 1;
+}
+.active-card {
+  transform: scale(1.1);
+  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+}
+.pricing-header {
+  border-bottom: 1px solid rgb(134, 143, 161);
+  /* padding-bottom: 5%; */
+}
+.price-details {
+  padding: 8% 0;
+}
+.pricing-body {
+  padding: 5% 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgb(134, 143, 161);
+}
+.price {
+  font-size: 3rem;
+  color: #ffffff;
+}
+.pricing-header h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.pricing-card hr {
+  border: 1px solid #808080;
+  background-color: #808080;
+  width: 95%;
+}
+.pricing-card ul {
+  list-style: none;
+}
+.pricing-card li {
+  margin: 4% 0;
+}
+.pricing-card li i {
+  margin-right: 2%;
+  color: #f63854;
+}
+.pricing-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+.pricing-btn .btn {
+  position: relative;
+  top: 25px;
+  width: 100%;
+  border: none;
+  font-size: 1.3rem;
+  background-color: #ffffff;
+  color: #f63854;
+  border: 2px solid #f63854;
+}
+
+/* RECOMMENDATIONS */
+.recommendations {
+  text-align: center;
+  background-color: #f4f4f4;
+  color: white;
+  padding: 2%;
+}
+.recommendations h1 {
+  color: #808080;
+}
+.section-body {
+  display: flex;
+  padding: 2%;
+  justify-content: space-around;
+}
+.recommendations .pricing-card {
+  /* margin: 0 2%; */
+  color: #808080;
+  background-color: transparent;
+}
+.recommendations .pricing-btn .btn {
+  background: #f63854;
+  color: #ffffff;
+}
+
+.view-menu {
+  margin: 2% auto;
+  width: 20%;
+  text-align: center;
+  font-size: 2rem;
+  color: #f63854;
+  border: 2px solid #f63854;
+}
+.view-menu:hover {
+  background-color: #f63854;
+  color: #ffffff;
+}

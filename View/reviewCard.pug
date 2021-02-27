@@ -1,12 +1,20 @@
-.card
-    .card-heading
-        h2 #{user.name}
-    .delete-review
-        button.btn(reviewid=`${review._id}`) Delete
-    .edit-review
-        button.btn(reviewid=`${review._id}`) Edit
-    .card-info
+//- .card
+//-     .card-heading
+//-         h2 #{user.name}
+//-     .delete-review
+//-         button.btn(reviewid=`${review._id}`) Delete
+//-     .edit-review
+//-         button.btn(reviewid=`${review._id}`) Edit
+//-     .card-info
+//-         | #{review.review}
+//-     - for(let i=0; i< review.rating; i++){
+//-         i.fas.fa-star.star
+//-     - }
+
+.review-card
+    .boxxed
+        i.fas.fa-quote-left
+        .review
         | #{review.review}
-    - for(let i=0; i< review.rating; i++){
-        i.fas.fa-star.star
-    - }
+        .user-name
+        em  - #{review.username} 

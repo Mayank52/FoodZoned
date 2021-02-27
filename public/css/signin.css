@@ -15,6 +15,7 @@ i:hover {
   height: 100vh;
   font-family: "Lato", sans-serif;
 }
+
 .parent-container {
   display: flex;
   width: 60%;
@@ -158,4 +159,61 @@ i:hover {
 .strike > span:after {
   left: 100%;
   margin-left: 15px;
+}
+
+/* Animation */
+.leftToRight {
+  position: relative;
+  /* animation: mymove 3s 1; */
+  animation: lefttoright 3s ease 1;
+  /* animatio */
+  animation-timing-function: ease;
+  z-index: 2;
+}
+.rightToLeft {
+  position: relative;
+  /* animation: mymove 3s 1; */
+  animation: righttoleft 3s ease 1;
+  /* animatio */
+  animation-timing-function: ease;
+}
+
+@keyframes lefttoright {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 540px;
+  }
+}
+
+@keyframes righttoleft {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 290px;
+  }
+}
+
+.signin-greetings-div {
+  /* display: none !important; */
+  transform: translateX(-200%);
+  /* transform: translateY(-100%); */
+}
+.signup-greetings-div {
+  /* transform: translateX(-200%); */
+  /* display: none !important; */
+}
+.signin-form-div {
+  transform: translateX(-300%);
+  /* display: none !important; */
+}
+.signup-form-div {
+  /* transform: translateX(-200%); */
+  /* display: none !important; */
+}
+
+.active {
+  display: flex !important;
 }

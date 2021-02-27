@@ -5,8 +5,10 @@ const bookingModel = require("../Model/bookingModel");
 async function getHomePage(req, res) {
   try {
     let plans = await planModel.find();
+    let reviews = await reviewModel.find();
     plans = plans.splice(0, 3);
-    res.render("homepage.pug", { name: req.name, plans });
+    reviews = reviews.splice(0, 3);
+    res.render("homepage.pug", { name: req.name, plans, reviews });
   } catch (error) {
     console.log(error);
   }
@@ -46,7 +48,7 @@ async function getPlansPage(req, res) {
   try {
     let plans = await planModel.find();
     console.log(plans);
-    res.render("plans.pug", { name: req.name, plans: plans });
+    res.render("planDetails.pug", { name: req.name, plans: plans });
   } catch (error) {
     console.log(error);
   }

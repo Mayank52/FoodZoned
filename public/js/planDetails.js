@@ -13,15 +13,10 @@ planItems.forEach((planItem) => {
     console.log("planitem");
     let id = planItem.id;
 
-    // console.log("Last Target:", lastSelectedPlan);
-
     lastSelectedPlan.classList.remove("active");
     e.target.classList.add("active");
     lastSelectedPlan = e.target;
 
-    // console.log("Target:", e.target);
-    // console.log("New Target:", lastSelectedPlan);
-    console.log(id);
     setValues(id);
   });
 });
@@ -54,10 +49,11 @@ async function setValues(id) {
 
     if (reviews.length > 0) reviewsDiv.innerHTML = "";
     reviews.forEach((review) => {
+      let createdOn = review.createdOn.split("T")[0];
       let reviewTag = `<div class="review">
             <div class="user">
             <div class="username">${review.username}</div>
-            <div class="date">${review.createdOn}</div>
+            <div class="date">${createdOn}</div>
             </div>
             <div class="review-stars">
             ${review.rating}/5

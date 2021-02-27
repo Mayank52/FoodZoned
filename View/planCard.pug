@@ -21,10 +21,10 @@
                 |                 Free delivery
             li
                 i.fas.fa-check  
-                |                 Rated #{plan.ratings} out of 10
+                |                 Rated #{Math.floor(plan.rating)} out of 5
     .pricing-btn
         button.btn(planId=`${plan["_id"]}`)  Buy Plan!
-    .details-btn
-        button.btn(href='/planDetails' planId=`${plan["_id"]}`)  Check Details
+    //- .details-btn
+    //-     button.btn(href='/planDetails' planId=`${plan["_id"]}`)  Check Details
     
     

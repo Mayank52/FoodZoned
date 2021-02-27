@@ -1,3 +1,5 @@
+let pricingCards = document.querySelectorAll(".pricing-card");
+pricingCards[1].classList.add("active-card");
 let names = ["EVERYONE" , "DEVELOPERS" , "FITNESS FREAKS" , "VEGANS"];            
 
 let changingText = document.querySelector("#changing-text");

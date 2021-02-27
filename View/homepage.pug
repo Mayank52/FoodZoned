@@ -43,68 +43,7 @@ block content
                     | All our vegetables are fresh, organic and local. Animals are raised
                     | without added hormones or antibiotics. Good for your health, the
                     | environment, and it also tastes better!
-    #steps.section.steps
-        .section-heading
-            h1 STEPS TO FOLLOW
-        hr
-        .section-body
-            img.steps-img(src='./images/foodApp.png' alt='')
-            .steps-to-follow
-                .list-item
-                    .step-number 1
-                    .step-desc
-                        | Choose the subscription plan that best fits your needs and sign up
-                        | today.
-                .list-item
-                    .step-number 2
-                    .step-desc
-                        | Order your delicious meal using our mobile app or website. Or you
-                        | can even call us!
-                .list-item
-                    .step-number 3
-                    .step-desc
-                        | Enjoy your meal after less than 20 minutes. See you the next time!
-    #reviews.section.reviews
-        .section-heading
-            h1 REVIEWS
-        hr
-        .section-body
-            .card
-                .card-heading
-                    h2 DAVID SMITH
-                .card-info
-                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
-                    | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
-                    | perferendis porro, iste voluptas!
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-            .card
-                .card-heading
-                    h2 DAVID SMITH
-                .card-info
-                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
-                    | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
-                    | perferendis porro, iste voluptas!
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-            .card
-                .card-heading
-                    h2 DAVID SMITH
-                .card-info
-                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iure
-                    | odio, quod nisi facilis commodi ut sunt ipsam, magnam eius repellat
-                    | perferendis porro, iste voluptas!
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
-                i.fas.fa-star.star
+    
     #pricing.section.pricing
         .section-heading
             h1 START EATING HEALTHY TODAY
@@ -112,6 +51,46 @@ block content
         .section-body
             each plan in plans
                 include planCard.pug
+        .view-menu
+            p View Full Menu
+
+    
+    #reviews.section.reviews
+        .section-heading
+            h1 REVIEWS
+        hr
+        .section-body
+            each review in reviews
+                include reviewCard.pug
+            //- .review-card
+            //-     .boxxed
+            //-         i.fas.fa-quote-left
+            //-         .review
+            //-         | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+            //-         | possimus veritatis tenetur nulla ipsum odio accusamus officia
+            //-         | suscipit corporis consequuntur
+            //-         .user-name
+            //-         em  - John Doe 
+            //- .review-card.right-card
+            //-     .boxxed
+            //-         i.fas.fa-quote-left
+            //-         .review
+            //-         | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+            //-         | possimus veritatis tenetur nulla ipsum odio accusamus officia
+            //-         | suscipit corporis consequuntur
+            //-         .user-name
+            //-         em  - John Doe 
+            //- .review-card.right-card
+            //-     .boxxed
+            //-         i.fas.fa-quote-left
+            //-         .review
+            //-         | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
+            //-         | possimus veritatis tenetur nulla ipsum odio accusamus officia
+            //-         | suscipit corporis consequuntur
+            //-         .user-name
+            //-         em  - John Doe 
+
+    
     #contact.section.contact
         .section-heading
             h1 CONTACT US
@@ -139,11 +118,12 @@ block content
                     textarea(name='')
                 .form-input.accept-terms
                     .checkbox
-                        input(type='checkbox' name='' id='')
+                        input(type='checkbox')
                     .conditions
                         | I have read and agree with all the Privacy Policy and Terms &
                         | Conditions.
                 .form-submit.btn SEND MESSAGE
+
 append scripts
     script(src="https://js.stripe.com/v3/")
     script(src="./js/buyPlan.js") 
