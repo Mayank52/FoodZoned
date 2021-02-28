@@ -12,7 +12,6 @@ let isDeleting = false;
 let showcase = document.querySelector(".showcase");
 let navlinks = document.querySelector(".navlinks");
 window.addEventListener("load" , function(){
-    
     typeWords();
     window.addEventListener("scroll" , function(){
         let {bottom} = showcase.getBoundingClientRect();
@@ -24,9 +23,6 @@ window.addEventListener("load" , function(){
             }
         }
     })
-
-
-
 })
 
 

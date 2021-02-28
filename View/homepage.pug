@@ -82,29 +82,31 @@ block content
                     source(src='./images/Avocado.mp4' type='video/mp4')
                     |             Your browser is not supported
             .contact-form
-                .form-input
-                    label(for='') Name
-                    input(type='text')
-                .form-input
-                    label(for='') Email
-                    input(type='text')
-                .form-input
-                    label(for='') How did you find us?
-                    select(name='' id='')
-                        option(value='Friends') Friends
-                        option(value='Advertisement') Advertisement
-                        option(value='Other') Other
-                .form-input
-                    label(for='') Drop an equiry/feedback
-                    textarea(name='')
-                .form-input.accept-terms
-                    .checkbox
-                        input(type='checkbox')
-                    .conditions
-                        | I have read and agree with all the Privacy Policy and Terms &
-                        | Conditions.
-                .form-submit.btn SEND MESSAGE
+                form
+                    .form-input
+                        label(for='') Name
+                        input#name(type='text')
+                    .form-input
+                        label(for='') Email*
+                        input#email(type='text' required)
+                    .form-input
+                        label(for='') How did you find us?
+                        select#find(name='')
+                            option(value='Friends') Friends
+                            option(value='Advertisement') Advertisement
+                            option(value='Other') Other
+                    .form-input
+                        label(for='') Drop an equiry/feedback*
+                        textarea#feedback(name='' required)
+                    .form-input.accept-terms
+                        .checkbox
+                            input#checkbox(type='checkbox' required)
+                        .conditions
+                            | I have read and agree with all the Privacy Policy and Terms &
+                            | Conditions.
+                    button.form-submit.btn SEND MESSAGE
 
 append scripts
     script(src="https://js.stripe.com/v3/")
     script(src="./js/buyPlan.js") 
+    script(src="./js/contactUs.js") 

@@ -401,6 +401,7 @@ textarea {
 }
 .form-input .checkbox {
   margin-right: 1%;
+  width: 5%;
 }
 .form-input.accept-terms {
   flex-direction: row;

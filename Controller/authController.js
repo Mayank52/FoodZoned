@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
-const {SECRET_KEY, GMAIL_ID, GMAIL_PW} = require("../config/secrets");
+const { SECRET_KEY, GMAIL_ID, GMAIL_PW } = require("../config/secrets");
 
 // const SECRET_KEY = process.env.SECRET_KEY;
 // const GMAIL_ID = process.env.GMAIL_ID;
@@ -15,7 +15,7 @@ async function sendEmail(message) {
       service: "gmail",
       host: "smtp.gmail.com",
       auth: {
-        user: GMAIL_ID ,
+        user: GMAIL_ID,
         pass: GMAIL_PW,
       },
     });
@@ -182,16 +182,16 @@ async function forgetPassword(req, res) {
       // console.log(updatedUser);
       let resetLink = `http://localhost:3000/resetpassword/${token}`;
       let message = {
-        from:"sushantberiwal@gmail.com",
-        to:email,
-        subject:"Reset Password",
-        text:resetLink
-      }
+        from: "sushantberiwal@gmail.com",
+        to: email,
+        subject: "Reset Password",
+        text: resetLink,
+      };
       let response = await sendEmail(message);
       res.json({
-        message:"Reset Link is sent to email",
-        response
-      })
+        message: "Reset Link is sent to email",
+        response,
+      });
     } else {
       res.status(404).json({
         message: "User Not Found ! Please Sign up first !",
@@ -234,6 +234,22 @@ async function resetPassword(req, res) {
   }
 }
 
+async function contactUs(req, res) {
+  try {
+    let { message } = req.body;
+    let response = sendEmail(message);
+    res.json({
+      message: "Contact Details Sent",
+      response,
+    });
+  } catch (error) {
+    res.status(200).json({
+      message: "Failed to sent contact details",
+      error,
+    });
+  }
+}
+
 module.exports.signup = signup;
 module.exports.login = login;
 module.exports.logout = logout;
@@ -242,3 +258,4 @@ module.exports.isAuthorized = isAuthorized;
 module.exports.forgetPassword = forgetPassword;
 module.exports.resetPassword = resetPassword;
 module.exports.isLoggedIn = isLoggedIn;
+module.exports.contactUs = contactUs;
