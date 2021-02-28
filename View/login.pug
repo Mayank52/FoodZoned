@@ -1,41 +1,41 @@
 extends base.pug
 append stylesheets
-    link(rel='stylesheet' href='../css/signin.css')
+    link(rel='stylesheet' href='../css/signin-signup.css')
 block content
-  .overall-container
-    .parent-container
-      .greetings-div
-        h1 Welcome Back!
-        button.btn-fade
-          a(href='/signup') Sign Up
-      .form-div
-        .signin-form
-          .form-header
-            .form-heading Sign In
-          .form-body
-            form
-              .form-input
-                .icon
-                  i.far.fa-envelope
-                input#email(type='email' placeholder='Email')
-              .form-input
-                .icon
-                  i.fas.fa-lock
-                input#pw(type='password' placeholder='Password')
-              span#message
-              .form-btn
-                button.btn.loginBtn Sign In
-            .forget-pw
-              button.btn.forgetPassword Forget Password  
-            .strike
-              span Or Sign In with
-            .signin-socials
-              .social
-                i.fab.fa-facebook
-              .social
-                i.fab.fa-google-plus-g
-              .social
-                i.fab.fa-linkedin
+    .overall-container
+        #container.container
+            .form-container.sign-up-container
+                form
+                    h1 Create Account
+                    input#name(type='text' placeholder='Name')
+                    input#emailSU(type='email' placeholder='Email')
+                    input#pwSU(type='password' placeholder='Password')
+                    input#cpw(type='password' placeholder='Password')
+                    button.signupBtn Sign Up
+
+            .form-container.sign-in-container
+                form
+                    h1 Sign in
+                    input#email(type='email' placeholder='Email')
+                    input#pw(type='password' placeholder='Password')
+                    span#message
+                    a.forgetPassword Forgot your password?
+                    button.loginBtn Sign In
+            .overlay-container
+                .overlay
+                    .overlay-panel.overlay-left
+                        h1 Welcome Back!
+                        p
+                            | To keep connected with us please login with your personal info
+                        button#signIn.ghost Sign In
+                    .overlay-panel.overlay-right
+                        h1 Hello, Friend!
+                        p Enter your personal details and start journey with us
+                        button#signUp.ghost Sign Up
+
+
 
 block scripts
     script(src="./js/login.js") 
+    script(src="./js/signup.js") 
+    script(src="./js/loginSlider.js") 

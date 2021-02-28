@@ -3,9 +3,9 @@ let pw = document.querySelector("#pw");
 let loginBtn = document.querySelector(".loginBtn");
 let message = document.querySelector("#message");
 let forgetPassword = document.querySelector(".forgetPassword");
-let signUpBtn = document.querySelector(".signup-btn");
-let greetingDiv = document.querySelector(".greetings-div");
-let formDiv = document.querySelector(".form-div");
+// let signUpBtn = document.querySelector(".signup-btn");
+// let greetingDiv = document.querySelector(".greetings-div");
+// let formDiv = document.querySelector(".form-div");
 
 forgetPassword.addEventListener("click", async function (e) {
   try {
@@ -16,6 +16,9 @@ forgetPassword.addEventListener("click", async function (e) {
         { email: email.value }
       );
       console.log(obj);
+    }
+    else{
+      message.innerHTML = "Enter Valid Email";
     }
   } catch (error) {
     console.log(error);

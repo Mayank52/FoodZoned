@@ -72,7 +72,7 @@ ul {
 
 /* FOOTER */
 footer {
-  position: absolute;
+  /* position: absolute; */
   background-color: #000000;
   /* height: 5%; */
   text-align: center;

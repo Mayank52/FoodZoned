@@ -45,11 +45,13 @@ block content
                         else
                             h2 No Orders
                 .reviews.hide
+                    .heading
+                        h1 Your Reviews
                     if reviews.length>0
                         each review in reviews
                             include reviewCard.pug
                     else
-                        | No Reviews
+                        h2 No Reviews
 
 block scripts
     script(src="./js/profileImage.js")

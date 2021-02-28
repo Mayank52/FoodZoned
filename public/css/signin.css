@@ -6,9 +6,9 @@ i:hover {
   transform: scale(1.4);
 }
 .overall-container {
-  /* background: darkorchid; */
-  background-image: linear-gradient(rgba(41, 41, 41, 0.596), rgb(0, 0, 0)),
-    url("../images/pexels-trang-doan-1092730.jpg");
+  background: #1e2022;
+  /* background-image: linear-gradient(rgba(41, 41, 41, 0.596), rgb(0, 0, 0)),
+    url("../images/pexels-trang-doan-1092730.jpg"); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,9 +20,13 @@ i:hover {
   display: flex;
   width: 60%;
   /* padding: 5% 0; */
+  color: #f63854;
 }
 .greetings-div {
-  background-color: crimson;
+  background-color: #ff0844;
+  color: #fff;
+  /* background-color: transparent; */
+  border: 2px solid #f63854;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +35,9 @@ i:hover {
   padding: 20% 0;
 }
 .form-div {
-  background-color: white;
+  /* background-color: white; */
+  background-color: transparent;
+  border: 2px solid #f63854;
   display: flex;
   flex-direction: column;
   justify-content: center;

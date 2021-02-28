@@ -19,8 +19,11 @@ async function getProfilePage(req, res) {
     // console.log(req.user);
     let userId = req.user._id;
     let orderObj = await bookingModel.find({ userId: userId }).exec();
-    let orders = orderObj[0].bookedPlans;
-    let reviews = await reviewModel.find({ userId: userId }).exec();
+    let orders=[], reviews=[];
+    if (orderObj.length!=0) {
+      orders = orderObj[0].bookedPlans;
+    }
+      reviews = await reviewModel.find({ userId: userId }).exec();
     res.render("profilePage.pug", {
       user: req.user,
       name: req.name,
