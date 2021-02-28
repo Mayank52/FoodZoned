@@ -28,7 +28,6 @@ a {
   /* transition: ease-in; */
 }
 
-
 /* NAVBAR */
 .navbar {
 }
@@ -168,7 +167,7 @@ a {
 }
 .card-heading {
   margin: 5% 0;
-  color: #808080
+  color: #fff;
 }
 .card-info {
   font-size: 18px;
@@ -179,6 +178,13 @@ a {
 }
 
 /* REVIEWS */
+.reviews {
+  background: #fff;
+  padding-bottom: 4%;
+}
+.reviews .section-heading{
+  color: #000;
+}
 .review-card {
   line-height: 1.6rem;
   display: flex;
@@ -190,13 +196,14 @@ a {
   /* height: 350px; */
   /* box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1); */
   /* margin: auto 0; */
-  /* padding: 0 3% 0 8%; */
+  padding: 0 2% 2% 2%;
   text-align: center;
-  /* background-color: white; */
-  color: #f63854;
+  background-color: #1e2022;
+  color: #fff;
 }
 .boxxed {
   border: 2px solid #f63854;
+  border-top: none;
   background: transparent;
   padding: 8%;
   min-width: 100%;
@@ -204,21 +211,35 @@ a {
 .user-name {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 4%;
-  font-size: 1.3rem;
-  
+  font-size: 1.2rem;
+  align-items: center;
+}
+.user-name .name-text {
+  z-index: 1;
+  /* background-image: url(../images/brush-stroke-banner-7.png);
+  width: 80%;
+  height: 20px; */
+}
+.name-background {
+  background: #ff0844;
+  width: 5%;
+  height: 25px;
+  position: absolute;
 }
 .review-card i {
-  font-size: 2rem;
+  font-size: 1.6rem;
   /* color: #f63854; */
   margin-bottom: 4%;
+  background: #ff0844;
+  border-radius: 25px;
+  padding: 5%;
 }
 .review {
   font-size: 18px;
   /* color: #f63854; */
 }
-
 
 /* .star {
   color: yellow;
@@ -230,7 +251,7 @@ a {
     url("../images/pexels-trang-doan-1092730.jpg");
   background-size: 100vw;
   background-attachment: fixed; */
-}
+/* } */
 /* .reviews .card {
   padding: 3%;
   background-color: transparent;
@@ -243,7 +264,8 @@ a {
   color: #000000;
   font-weight: 100;
   font-size: 1.7rem;
-} */ */
+} */
+*/
 
 /* PRICING */
 .pricing {
