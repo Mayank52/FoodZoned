@@ -55,12 +55,12 @@ async function updateReviewById(req, res) {
     console.log("Inside Update Review");
     let id = req.params.id;
     let updateObj = req.body;
-    console.log(updateObj);
+    // console.log(updateObj);
 
     let review = await reviewModel.findById(id);
     let newRating = updateObj.rating;
     let oldRating = review.rating;
-    console.log(review);
+    // console.log(review);
 
     for (key in updateObj) {
       review[key] = updateObj[key];

@@ -41,7 +41,8 @@
   padding: 3% 0;
 }
 .navlist-item:hover {
-  background: rgb(134, 143, 161);
+  /* background: rgb(134, 143, 161); */
+  color: #f63854;
 }
 .navitem-count {
   background: bisque;
@@ -64,7 +65,7 @@
 
 /* Order-History */
 .order-history .heading {
-  margin-bottom: 4%;
+  /* margin-bottom: 4%; */
   margin-left: 1%;
 }
 .orders {
@@ -114,7 +115,7 @@
   justify-content: space-between;
 }
 .review-history .heading {
-  margin-bottom: 4%;
+  /* margin-bottom: 4%; */
   margin-left: 1%;
 }
 .reviews {
@@ -126,13 +127,26 @@
 }
 .review-edit-btns {
   display: flex;
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
+  width: 50%;
 }
 .review-edit-btns button {
 }
 .card {
   /* width: 30%; */
   margin: 2% 1%;
+}
+hr{
+  margin: 1% 1%;
+  margin-bottom: 2%;
+  width: 40%;
+}
+
+.delete-review{
+  margin: 0px 5%;
+}
+.edit-review{
+
 }
 
 /* Edit Review */

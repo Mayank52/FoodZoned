@@ -1,4 +1,6 @@
-EITHER MAKE THE USER LOGIN AT LANDING PAGE OR ALLOW ACCESS WITHOUT LOGIN TO AVAILABLE PLANS
 Add User's Geo Location while ordering food
 Add Admin Features
 
+
+Correct the plan rating updates
+Figure out how to go contact us, features section, from another page

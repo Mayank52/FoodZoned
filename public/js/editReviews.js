@@ -125,12 +125,12 @@ saveReviewBtns.forEach((saveReviewBtn) => {
       let review = editReviewTextBox.value;
       let rating = newRating.value;
       //Currently selected plan has a active class
-      console.log(review, rating, reviewId);
+      // console.log(review, rating, reviewId);
       let updateObj = {
         review: review,
         rating: rating,
       };
-      console.log(updateObj);
+      // console.log(updateObj);
       let updatedReviewObj = await axios.patch(
         `http://localhost:3000/api/review/${reviewId}`,
         updateObj

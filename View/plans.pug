@@ -1,21 +1,22 @@
-extends base.pug
+//- TO BE DELETED
+//- extends base.pug
 
-append stylesheets
-    link(rel='stylesheet' href='./css/plans.css')
+//- append stylesheets
+//-     link(rel='stylesheet' href='./css/plans.css')
     
-block content
-    #pricing.section.pricing
-        .section-heading
-            h1 START EATING HEALTHY TODAY
-        hr
-        .section-body
-            each plan in plans
-                include planCard.pug
-block scripts
-    script(src="https://js.stripe.com/v3/")
-    script(src="./js/buyPlan.js")
-    //- script(src='./js/planDetails.js')
-    //- script(src='./js/modal.js')
+//- block content
+//-     #pricing.section.pricing
+//-         .section-heading
+//-             h1 START EATING HEALTHY TODAY
+//-         hr
+//-         .section-body
+//-             each plan in plans
+//-                 include planCard.pug
+//- block scripts
+//-     script(src="https://js.stripe.com/v3/")
+//-     script(src="./js/buyPlan.js")
+//-     //- script(src='./js/planDetails.js')
+//-     //- script(src='./js/modal.js')
 
 
 
