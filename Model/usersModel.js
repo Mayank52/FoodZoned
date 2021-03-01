@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const crypto = require("crypto");
-const {DB_LINK} = require("../config/secrets");
+// const {DB_LINK} = require("../config/secrets");
 
-// const DB_LINK = process.env.DB_LINK;
+const DB_LINK = process.env.DB_LINK;
 
 mongoose
   .connect(DB_LINK, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -77,10 +77,6 @@ userSchema.methods.resetPasswordHandler = function (password, confirmPassword) {
   this.pwToken = undefined;
   this.tokenTime = undefined;
 };
-
-// userSchema.methods.createResetToken = function(){
-//   return "hey";
-// }
 
 const userModel = mongoose.model("userscollection", userSchema);
 module.exports = userModel;

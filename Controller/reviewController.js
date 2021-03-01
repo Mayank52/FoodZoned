@@ -5,13 +5,10 @@ const userModel = require("../Model/usersModel");
 async function createReview(req, res) {
   try {
     let sentReview = req.body;
-    console.log("Review0: ", sentReview);
-
     let userId = req.id;
     let user = await userModel.findById(userId);
     sentReview.userId = userId;
     sentReview.username = user.name;
-    console.log("Review1: ", sentReview);
 
     let review = await reviewModel.create(sentReview);
 

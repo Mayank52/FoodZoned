@@ -16,14 +16,14 @@ async function getHomePage(req, res) {
 
 async function getProfilePage(req, res) {
   try {
-    // console.log(req.user);
     let userId = req.user._id;
     let orderObj = await bookingModel.find({ userId: userId }).exec();
-    let orders=[], reviews=[];
-    if (orderObj.length!=0) {
+    let orders = [],
+      reviews = [];
+    if (orderObj.length != 0) {
       orders = orderObj[0].bookedPlans;
     }
-      reviews = await reviewModel.find({ userId: userId }).exec();
+    reviews = await reviewModel.find({ userId: userId }).exec();
     res.render("profilePage.pug", {
       user: req.user,
       name: req.name,
@@ -67,20 +67,6 @@ async function getReviewsPage(req, res) {
   }
 }
 
-// async function getPlanDetailsPage(req, res) {
-//   try {
-//     //get plan details and reviews
-//     // let planId = req.id;
-//     // let plan = await planModel.findById(planId);
-//     // let reviews = await reviewModel.find({ planId: planId });
-//     let plans = await planModel.find();
-
-//     res.render("planDetails.pug", { plans: plans });
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
-
 module.exports.getHomePage = getHomePage;
 module.exports.getLoginPage = getLoginPage;
 module.exports.getSignUpPage = getSignUpPage;
@@ -88,4 +74,3 @@ module.exports.getPlansPage = getPlansPage;
 module.exports.getResetPasswordPage = getResetPasswordPage;
 module.exports.getProfilePage = getProfilePage;
 module.exports.getReviewsPage = getReviewsPage;
-// module.exports.getPlanDetailsPage = getPlanDetailsPage;

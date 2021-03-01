@@ -90,7 +90,6 @@ async function deleteUserById(req, res) {
   }
 }
 
-
 async function updateProfilePhoto(req , res){
   try{
     let file = req.file;

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const { DB_LINK } = require("../config/secrets");
+// const { DB_LINK } = require("../config/secrets");
 
-// const DB_LINK = process.env.DB_LINK;
+const DB_LINK = process.env.DB_LINK;
 
 mongoose
   .connect(DB_LINK, { useNewUrlParser: true, useUnifiedTopology: true })

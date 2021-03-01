@@ -3,11 +3,11 @@ const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
-const { SECRET_KEY, GMAIL_ID, GMAIL_PW } = require("../config/secrets");
+// const { SECRET_KEY, GMAIL_ID, GMAIL_PW } = require("../config/secrets");
 
-// const SECRET_KEY = process.env.SECRET_KEY;
-// const GMAIL_ID = process.env.GMAIL_ID;
-// const GMAIL_PW = process.env.GMAIL_PW;
+const SECRET_KEY = process.env.SECRET_KEY;
+const GMAIL_ID = process.env.GMAIL_ID;
+const GMAIL_PW = process.env.GMAIL_PW;
 
 async function sendEmail(message) {
   try {
@@ -168,7 +168,6 @@ async function isAuthorized(req, res, next) {
 
 async function forgetPassword(req, res) {
   try {
-    // email nikal do
     let { email } = req.body;
     console.log(email);
     let user = await userModel.findOne({ email: email });

@@ -1,6 +1,5 @@
 const planModel = require("../Model/plansModel");
 
-
 async function createPlan(req, res) {
   try{
     let sentPlan = req.body;
@@ -53,7 +52,6 @@ async function updatePlanById(req, res) {
   try{
     let id = req.params.id ;
     let {updateObj} = req.body;
-    // let updatedPlan = await planModel.findByIdAndUpdate(id , updateObj , {new:true} );
     let plan = await planModel.findById(id);
     console.log(plan);
     
@@ -63,21 +61,17 @@ async function updatePlanById(req, res) {
 
     // create // save    
     let updatedPlan = await plan.save();
-    // console.log(updatedPlan);
     res.status(200).json({
       message:"updated plan successfully !!",
       data : updatedPlan
     })
   }
   catch(error){
-    // console.log(error);
     res.status(501).json({
       message:"failed to update plan",
       error:error.errors.discount.message
     })
   }
-  
-  
 }
 async function deletePlanById(req, res) {
   try{
@@ -93,11 +87,8 @@ async function deletePlanById(req, res) {
       message:"Plan failed to delete !!",
       error
     })
-  }
-  
+  } 
 }
-
-
 
 module.exports.getAllPlans = getAllPlans;
 module.exports.createPlan = createPlan;
