@@ -25,12 +25,3 @@ for (let i = 0; i < buyPlansButtons.length; i++) {
     }
   });
 }
-
-// showDetailsButtons.forEach((btn) => {
-//   btn.addEventListener("click", async () => {
-//     console.log(btn);
-//     let id = btn.getAttribute("planid");
-//     window.location.href = `http://localhost:3000/planDetails/${id}`;
-
-//   });
-// });
