@@ -182,7 +182,7 @@ async function forgetPassword(req, res) {
       // console.log(updatedUser);
       let resetLink = `http://localhost:3000/resetpassword/${token}`;
       let message = {
-        from: "sushantberiwal@gmail.com",
+        from: "mayankaggarwal267@gmail.com",
         to: email,
         subject: "Reset Password",
         text: resetLink,
@@ -236,7 +236,20 @@ async function resetPassword(req, res) {
 
 async function contactUs(req, res) {
   try {
-    let { message } = req.body;
+    let messageBody = req.body;
+    let textBody = `Name: ${messageBody.name}
+    Email: ${messageBody.email}
+    Source: ${messageBody.source}
+    Feedback: ${messageBody.feedback}
+    CheckBox: ${messageBody.checkbox}`;
+
+    let message = {
+      from: "rohitrt4783@gmail.com", //from: foodZoned App
+      to: "mayankaggarwal267@gmail.com", //to: admin
+      subject: "FoodApp Contact Us Email",
+      text: textBody,
+    };
+    console.log(message);
     let response = sendEmail(message);
     res.json({
       message: "Contact Details Sent",

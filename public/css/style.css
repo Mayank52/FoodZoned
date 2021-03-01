@@ -29,6 +29,9 @@ i {
 ul {
   list-style: none;
 }
+textarea{
+  resize: none;
+}
 
 /* NAVBAR */
 .navbar {

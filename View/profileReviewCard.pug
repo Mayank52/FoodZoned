@@ -1,0 +1,32 @@
+.card
+    .header
+        .card-heading
+            h2 #{user.name}
+        .review-edit-btns
+            .delete-review(class=`a${review._id}`)
+                //- button(reviewid=`${review._id}`)
+                i.fas.fa-trash-alt(reviewid=`${review._id}`)
+            .edit-review(class=`a${review._id}`)
+                //- button(reviewid=`${review._id}`)
+                i.fas.fa-pencil-alt(reviewid=`${review._id}`)
+            .save-review-btn(class=`a${review._id}`)
+                button.btn(reviewid=`${review._id}`) Save
+            .cancel-btn(class=`a${review._id}`)
+                button.btn(reviewid=`${review._id}`) Cancel
+    .review-rating
+        .user-rating(class=`a${review._id}`)
+            - for(let i=0; i< review.rating; i++){
+                i.fas.fa-star.star
+            - }
+        select#new-rating(class=`a${review._id}`)
+            option(value='1') 1
+            option(value='2') 2
+            option(value='3') 3
+            option(value='4') 4
+            option(value='5') 5
+
+    .card-info
+        .user-review(class=`a${review._id}`) #{review.review}
+        textarea.edit-review-area(class="editable" id=`${review._id}` name="", cols="30", rows="5" readonly) #{review.review}
+
+

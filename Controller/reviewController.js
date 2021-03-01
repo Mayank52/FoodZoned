@@ -52,8 +52,11 @@ async function createReview(req, res) {
 
 async function updateReviewById(req, res) {
   try {
+    console.log("Inside Update Review");
     let id = req.params.id;
-    let { updateObj } = req.body;
+    let updateObj = req.body;
+    console.log(updateObj);
+
     let review = await reviewModel.findById(id);
     let newRating = updateObj.rating;
     let oldRating = review.rating;

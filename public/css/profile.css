@@ -29,7 +29,6 @@
 }
 
 .profile-img .img-overlay {
-
 }
 
 .profile-nav {
@@ -110,14 +109,56 @@
 }
 
 /* Reviews */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.review-history .heading {
+  margin-bottom: 4%;
+  margin-left: 1%;
+}
 .reviews {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
 }
 .review {
 }
-.card{
-  width: 30%;
+.review-edit-btns {
+  display: flex;
+  /* justify-content: flex-end; */
+}
+.review-edit-btns button {
+}
+.card {
+  /* width: 30%; */
+  margin: 2% 1%;
+}
+
+/* Edit Review */
+.save-review-btn {
+  display: none;
+}
+.cancel-btn {
+  display: none;
+}
+textarea {
+  /* border: none; */
+  display: none;
+  width: 100%;
+  /* height: 37%; */
+}
+.review-rating select{
+  display: none;
+}
+.editable {
+  border: none;
+  font-size: 1rem;
+  padding: 1%;
+  background-color: #f1eded;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
 }
 
 .profile-details {

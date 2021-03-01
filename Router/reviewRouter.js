@@ -19,7 +19,7 @@ reviewRouter
   .patch(protectRoute, updateReviewById)
   .delete(protectRoute, deleteReviewById);
 
-reviewRouter.route("/plan/:id").get(protectRoute, getReviewsByPlanId);
+reviewRouter.route("/plan/:id").get(getReviewsByPlanId);
 reviewRouter.route("/user/:id").get(protectRoute, getReviewsByUserId);
 
 module.exports = reviewRouter;

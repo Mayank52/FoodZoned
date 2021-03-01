@@ -13,12 +13,12 @@ const {
 
 planRouter
 .route("")
-.get( protectRoute , getAllPlans)
+.get(getAllPlans)
 .post(createPlan);
 
 planRouter
   .route("/:id")
-  .get( protectRoute , getPlanById)
+  .get(getPlanById)
   .patch( protectRoute , isAuthorized , updatePlanById)
   .delete( protectRoute, isAuthorized , deletePlanById);
 

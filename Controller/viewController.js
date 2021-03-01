@@ -67,19 +67,19 @@ async function getReviewsPage(req, res) {
   }
 }
 
-async function getPlanDetailsPage(req, res) {
-  try {
-    //get plan details and reviews
-    // let planId = req.id;
-    // let plan = await planModel.findById(planId);
-    // let reviews = await reviewModel.find({ planId: planId });
-    let plans = await planModel.find();
+// async function getPlanDetailsPage(req, res) {
+//   try {
+//     //get plan details and reviews
+//     // let planId = req.id;
+//     // let plan = await planModel.findById(planId);
+//     // let reviews = await reviewModel.find({ planId: planId });
+//     let plans = await planModel.find();
 
-    res.render("planDetails.pug", { plans: plans });
-  } catch (err) {
-    console.log(err);
-  }
-}
+//     res.render("planDetails.pug", { plans: plans });
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 
 module.exports.getHomePage = getHomePage;
 module.exports.getLoginPage = getLoginPage;
@@ -88,4 +88,4 @@ module.exports.getPlansPage = getPlansPage;
 module.exports.getResetPasswordPage = getResetPasswordPage;
 module.exports.getProfilePage = getProfilePage;
 module.exports.getReviewsPage = getReviewsPage;
-module.exports.getPlanDetailsPage = getPlanDetailsPage;
+// module.exports.getPlanDetailsPage = getPlanDetailsPage;

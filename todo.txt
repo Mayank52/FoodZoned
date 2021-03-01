@@ -1,7 +1,4 @@
 EITHER MAKE THE USER LOGIN AT LANDING PAGE OR ALLOW ACCESS WITHOUT LOGIN TO AVAILABLE PLANS
-
--> Update Reviews Frontend(Can be done from profile section)
-Do Front End part of reviews
+Add User's Geo Location while ordering food
 Add Admin Features
-Change the design
 

@@ -15,7 +15,7 @@ block content
                     #order-history.navlist-item
                         |My Orders
                         .navitem-count #{orders.length}
-                    #reviews.navlist-item.no-border
+                    #review-history.navlist-item.no-border
                         |My Reviews
                         .navitem-count #{reviews.length}
             .right-container
@@ -44,14 +44,15 @@ block content
                                 include orderCard.pug
                         else
                             h2 No Orders
-                .reviews.hide
+                .review-history.hide
                     .heading
                         h1 Your Reviews
-                    if reviews.length>0
-                        each review in reviews
-                            include reviewCard.pug
-                    else
-                        h2 No Reviews
+                    .reviews
+                        if reviews.length>0
+                            each review in reviews
+                                include profileReviewCard.pug
+                        else
+                            h2 No Reviews
 
 block scripts
     script(src="./js/profileImage.js")
