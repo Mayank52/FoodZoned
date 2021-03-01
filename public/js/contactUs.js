@@ -31,6 +31,7 @@ sendMessageBtn.addEventListener("click", async (e) => {
       messageDiv.innerHTML =
         "Thank you for your time. We will get back to you soon!";
     } else {
+      messageDiv.innerHTML = "Enter all Required Fields";
       console.log("Enter all Required fields");
     }
   } catch (err) {
