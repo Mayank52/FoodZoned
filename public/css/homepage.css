@@ -182,7 +182,7 @@ a {
   background: #fff;
   padding-bottom: 4%;
 }
-.reviews .section-heading{
+.reviews .section-heading {
   color: #000;
 }
 .review-card {
@@ -359,7 +359,7 @@ a {
 .contact-img {
   width: 50%;
 }
-.contact-img video {
+.contact-img img {
   width: 80%;
 }
 .contact-form {

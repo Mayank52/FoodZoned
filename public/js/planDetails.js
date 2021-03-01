@@ -37,8 +37,12 @@ async function setValues(id) {
     price.innerHTML = `$${plan.price}`;
     buyPlanButton.setAttribute("planId", `${id}`);
     let starCount = plan.rating;
-    for (let i = 0; i < Math.floor(starCount) / 2; i++) {
+    console.log("rating: ",plan.rating);
+    for (let i = 0; i < Math.floor(starCount); i++) {
       stars[i].style.color = "yellow";
+    }
+    for (let i = Math.floor(starCount) ; i < 5; i++) {
+      stars[i].style.color = "lightgrey";
     }
 
     let reviewObj = await axios.get(

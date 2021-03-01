@@ -62,15 +62,6 @@ block content
                 include planCard.pug
         .view-menu
             a(href="/plans") View Full Menu
-
-    
-    //- #reviews.section.reviews
-    //-     .section-heading
-    //-         h1 REVIEWS
-    //-     hr
-    //-     .section-body
-    //-         each review in reviews
-    //-             include reviewCard.pug
     
     #contact.section.contact
         .section-heading
@@ -78,9 +69,10 @@ block content
         hr
         .section-body
             .contact-img
-                video.bg-video__content(autoplay='' muted='' loop='')
-                    source(src='./images/Avocado.mp4' type='video/mp4')
-                    |             Your browser is not supported
+                img(src="./images/contact-us.png", alt="")
+                //- video.bg-video__content(autoplay='' muted='' loop='')
+                //-     source(src='./images/contact-us.png' type='video/mp4')
+                //-     |             Your browser is not supported
             .contact-form
                 form
                     .form-input

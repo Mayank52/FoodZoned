@@ -14,6 +14,14 @@ hr {
   margin: 3% auto;
   width: 100%;
 }
+.left-hr {
+  color: #f63854;
+  width: 25%;
+  margin: 1% 3%;
+  border: 1.5px solid #f63854;
+  background-color: #f63854;
+  /* width: 50% */
+}
 /* .modal {
   position: absolute;
   display: flex;
@@ -60,7 +68,7 @@ hr {
   color: #f63854;
   padding: 2%;
 }
-.plan-nav h1{
+.plan-nav h1 {
   margin-bottom: 5%;
 }
 .details {
@@ -78,26 +86,24 @@ hr {
   color: lightgrey;
   float: right;
 } */
-.details{
+.details {
   /* background-color: #1e2022; */
   /* color: #f63854; */
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
-
 }
 .left-container {
   width: 65%;
   padding: 2% 4%;
   /* background: aliceblue; */
 }
-.plan-item{
+.plan-item {
   display: flex;
   border-bottom: 1px solid;
   justify-content: space-between;
   padding: 3% 0;
 }
-.plan-item:hover{
+.plan-item:hover {
   color: #fff;
-
 }
 .img-preview {
   display: flex;
@@ -220,10 +226,11 @@ hr {
 /* Reviews */
 .reviews {
   padding: 3%;
+  padding-bottom: 0;
   /* font-size: 1.4rem; */
   line-height: 1.2rem;
 }
-.review-heading{
+.review-heading {
   margin-top: 5%;
   margin-left: 3%;
 }
@@ -257,11 +264,54 @@ hr {
 .hide {
   display: none;
 }
-.active{
+.active {
   color: #fff;
 }
-.navlinks{
+.add-review {
+  margin-top: 4%;
+  margin-left: 3%;
+}
+.add-review h2 {
+  margin-bottom: 2%;
+}
+.add-review hr {
+  margin-left: 0;
+}
+.add-review button {
+  width: 15%;
+  margin-bottom: 2%;
+  border: 2px solid #f63854;
+  background: white;
+  color: #f63854;
+  font-size: 1.0rem;
+}
+.add-review button:hover{
+  background-color: #f63854;
+  color: #fff;
+}
+.new-review {
+  border: 1px solid black;
+  font-size: 1rem;
+  padding: 1%;
+  background-color: #f1eded;
+  width: 60%;
+  outline: none;
+  border-radius: 10px;
+}
+.new-review-rating {
+  margin: 2% 0;
+}
+.new-review-rating select {
+  background-color: #f1eded;
+  font-size: 1.1rem;
+  padding: 0.5%;
+  border-radius: 6px;
+}
+.rating-heading {
+  font-size: 1.2rem;
+  margin-right: 1%;
+}
+.navlinks {
   border-bottom: 2px solid #f63854;
   /* box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1); */
-
 }

@@ -14,6 +14,7 @@
             .cancel-btn(class=`a${review._id}`)
                 button.btn(reviewid=`${review._id}`) Cancel
     .review-rating
+        span.rating-heading Rating: 
         .user-rating(class=`a${review._id}`)
             - for(let i=0; i< review.rating; i++){
                 i.fas.fa-star.star

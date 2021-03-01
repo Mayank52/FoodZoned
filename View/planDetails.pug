@@ -18,20 +18,20 @@ block content
             .left-arrow
               i.fas.fa-chevron-left
             .display-img
-              img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+              img(src='./images/food2.jpeg' alt='')
             .right-arrow
               i.fas.fa-chevron-right
           .img-scroll
             .preview-img.active-img
-              img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+              img(src='./images/food1.jpeg' alt='')
             .preview-img
-              img(src='./images/foodApp.png' alt='')
+              img(src='./images/foodApp.jpeg' alt='')
             .preview-img
-              img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+              img(src='./images/food3.jpeg' alt='')
             .preview-img
-              img(src='./images/foodApp.png' alt='')
+              img(src='./images/foodApp.jpeg' alt='')
             .preview-img
-              img(src='./images/pexels-trang-doan-1092730.jpg' alt='')
+              img(src='./images/food4.jpeg' alt='')
         .right-container
           .plan-details
             .name
@@ -70,20 +70,21 @@ block content
           .pricing-btn
             button.btn.buy-btn  Buy Plan!
       h1.review-heading Reviews
+      hr.left-hr
       .reviews
         | No Reviews
       .add-review
-        textarea(cols="30", rows="10" class="new-review")
+        h2 Add Review
+        textarea(cols="30", rows="7" class="new-review")
         .new-review-rating
-          | Rating: 
+          span.rating-heading Rating: 
           select
             option(value='1') 1
             option(value='2') 2
             option(value='3') 3
             option(value='4') 4
             option(value='5') 5
-
-        button.btn.add-review Add Review
+        button.btn Add Review
         
 block scripts
   script(src="https://js.stripe.com/v3/")
