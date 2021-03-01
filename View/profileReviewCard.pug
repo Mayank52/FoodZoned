@@ -4,10 +4,8 @@
             h2 #{user.name}
         .review-edit-btns
             .delete-review(class=`a${review._id}`)
-                //- button(reviewid=`${review._id}`)
                 i.fas.fa-trash-alt(reviewid=`${review._id}`)
             .edit-review(class=`a${review._id}`)
-                //- button(reviewid=`${review._id}`)
                 i.fas.fa-pencil-alt(reviewid=`${review._id}`)
             .save-review-btn(class=`a${review._id}`)
                 button.btn(reviewid=`${review._id}`) Save

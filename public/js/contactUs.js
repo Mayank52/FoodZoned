@@ -23,7 +23,7 @@ sendMessageBtn.addEventListener("click",async (e) => {
       };
       console.log(messageBody);
       let contactObj = await axios.post(
-        "http://localhost:3000/api/user/contact",
+        "https://foodzoned--app.herokuapp.com/api/user/contact",
         messageBody
       );
       console.log(contactObj);

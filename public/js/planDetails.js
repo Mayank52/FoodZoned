@@ -24,7 +24,7 @@ planItems.forEach((planItem) => {
 async function setValues(id) {
   try {
     // let id = lastSelectedPlan.id;
-    let planObj = await axios.get(`http://localhost:3000/api/plans/${id}`);
+    let planObj = await axios.get(`https://foodzoned--app.herokuapp.com/api/plans/${id}`);
     console.log("Plan :", planObj);
     let plan = planObj.data.data;
     console.log(plan);
@@ -46,7 +46,7 @@ async function setValues(id) {
     }
 
     let reviewObj = await axios.get(
-      `http://localhost:3000/api/review/plan/${id}`
+      `https://foodzoned--app.herokuapp.com/api/review/plan/${id}`
     );
     console.log(reviewObj);
     let reviews = reviewObj.data.data;

@@ -20,7 +20,7 @@ addReviewBtn.addEventListener("click", async (e) => {
 
     console.log(newReviewObj);
     let reviewObj = await axios.post(
-      "http://localhost:3000/api/review",
+      "https://foodzoned--app.herokuapp.com/api/review",
       newReviewObj
     );
     console.log(reviewObj);

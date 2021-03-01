@@ -15,7 +15,5 @@ viewRouter.route("/signup").get(getSignUpPage);
 viewRouter.route("/plans").get(getPlansPage);
 viewRouter.route("/profile").get(getProfilePage);
 viewRouter.route("/reviews").get(getReviewsPage);
-// viewRouter.route("/planDetails").get(getPlanDetailsPage);
-
 
 module.exports = viewRouter;

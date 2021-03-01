@@ -40,8 +40,6 @@ saveDetails.addEventListener("click", async () => {
     let updateObj = {
       name: profileInput[0].value,
       email: profileInput[1].value,
-      // "address":profileInput[2].value,
-      // "contact":profileInput[3].value
     };
     console.log("Update:", updateObj);
     let obj = await axios.patch("http://localhost:3000/api/user", {

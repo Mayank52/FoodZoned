@@ -16,7 +16,7 @@ signupBtn.addEventListener("click", async function (e) {
         confirmPassword: cpw.value,
       };
       let obj = await axios.post(
-        "http://localhost:3000/api/user/signup",
+        "https://foodzoned--app.herokuapp.com/user/signup",
         signupObject
       );
       console.log(obj);
