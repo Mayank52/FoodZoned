@@ -131,6 +131,7 @@
   width: 50%;
 }
 .review-edit-btns button {
+  width: 100%;
 }
 .rating-heading {
   font-size: 1.2rem;
@@ -157,9 +158,12 @@ hr {
 /* Edit Review */
 .save-review-btn {
   display: none;
+  width: 20%;
+  margin: 0 4%;
 }
 .cancel-btn {
   display: none;
+  width: 20%;
 }
 textarea {
   /* border: none; */
