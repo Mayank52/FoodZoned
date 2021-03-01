@@ -4,7 +4,8 @@ let findInput = document.querySelector("#find");
 let feedbackInput = document.querySelector("#feedback");
 let checkboxInput = document.querySelector("#checkbox");
 let sendMessageBtn = document.querySelector(".form-submit");
-sendMessageBtn.addEventListener("click",async (e) => {
+let messageDiv = document.querySelector(".message");
+sendMessageBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   let name = nameInput.value;
   let email = emailInput.value;
@@ -26,7 +27,9 @@ sendMessageBtn.addEventListener("click",async (e) => {
         "https://foodzoned--app.herokuapp.com/api/user/contact",
         messageBody
       );
-      console.log(contactObj);
+      // console.log(contactObj);
+      messageDiv.innerHTML =
+        "Thank you for your time. We will get back to you soon!";
     } else {
       console.log("Enter all Required fields");
     }

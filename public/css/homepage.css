@@ -406,6 +406,10 @@ textarea {
 .form-input.accept-terms {
   flex-direction: row;
 }
+.message{
+  color: #f63854;
+  font-size: 1.2rem;
+}
 
 /* FOOTER */
 footer {
