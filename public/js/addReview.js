@@ -1,7 +1,7 @@
 let addReviewBtn = document.querySelector(".add-review button");
 let reviewTextArea = document.querySelector(".new-review");
 let ratingSelectBox = document.querySelector(".new-review-rating select");
-let allLis = document.querySelectorAll(".link");
+// let allLis = document.querySelectorAll(".link");
 
 //add Review
 addReviewBtn.addEventListener("click", async (e) => {
