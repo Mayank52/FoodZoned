@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+} 
+body{
+    background-color: #1e2022;
+
+}
+
 hr {
   border: none;
   background-color: lightgrey;
@@ -14,28 +23,39 @@ hr {
 }
 .parent-container {
   display: flex;
+  background-color: white;
+  overflow-y: scroll;
+  height: 90vh;
+  width: 85vw;
+  z-index: 3;
+  margin: 1% auto;
+  border-radius: 25px;
 }
 .plan-nav {
-  width: 20%;
-  background-color: #1e2022;
+  width: 28%;
   border-right: 1px solid #f63854;
-  color: #f63854;
+  color: white;
   padding: 2%;
+  overflow-y: scroll;
 }
 .plan-nav h1 {
   margin-bottom: 5%;
 }
+.plan-nav i{
+  margin-right: 4%;
+}
 .details {
   width: 85%;
+  overflow-y: scroll;
 }
 .plan {
   display: flex;
   padding-top: 1%;
 }
 
-.details {
+/* .details {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
-}
+} */
 .left-container {
   width: 65%;
   padding: 2% 4%;
@@ -47,8 +67,11 @@ hr {
   justify-content: space-between;
   padding: 3% 0;
 }
-.plan-item:hover {
+/* .plan-item:hover {
   color: #fff;
+} */
+.plan-item i{
+  display: none;
 }
 .img-preview {
   display: flex;
@@ -88,7 +111,6 @@ hr {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* margin: 10% auto; */
 }
 .active-img {
   border: 2px solid black;
@@ -96,13 +118,9 @@ hr {
 
 /* Right Container */
 .right-container {
-  width: 30%;
-  /* box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.2); */
+  width: 33%;
   border-left: 3px solid #fa526b;
-  /* border-radius: 20px; */
-  /* height: 90%; */
-  /* margin-left: 1%; */
-  padding: 2%;
+  padding: 5% 2%;
 }
 .plan-details {
   line-height: 1.8rem;
@@ -113,7 +131,7 @@ hr {
 }
 .rating {
   display: flex;
-  margin: 4% 0;
+  margin: 8% 0;
 }
 .stars {
   color: lightgray;
@@ -140,7 +158,7 @@ hr {
   font-size: 3rem;
 }
 .description {
-  margin: 5% 0;
+  margin: 10% 0;
 }
 .description li {
   margin: 3% 0;
@@ -205,8 +223,11 @@ hr {
 .hide {
   display: none;
 }
-.active {
+/* .active {
   color: #fff;
+} */
+.active i{
+  display: block;
 }
 .add-review {
   margin-top: 4%;
@@ -253,6 +274,6 @@ hr {
   margin-right: 1%;
 }
 .navlinks {
-  border-bottom: 2px solid #f63854;
+  /* border-bottom: 2px solid #f63854; */
   /* box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1); */
 }

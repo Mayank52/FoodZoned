@@ -6,11 +6,13 @@ append stylesheets
 block content
   .parent-container
     .plan-nav
-      h1 Available Plans
+      h1 
+        i.fas.fa-utensils
+        | Available Plans
       .plan-list
         each plan in plans
           .plan-item(id = `${plan._id}`)  #{plan.name} 
-
+            i.fas.fa-chevron-right
     .details
       .plan
         .left-container
@@ -45,8 +47,6 @@ block content
               .review-count
                 span.count
                 |                   Reviews
-            .tagline
-              | Lorem ipsum dolor sit amet consectetur adipisicing elit
             .price
               | Price: 
               span.price-amount
