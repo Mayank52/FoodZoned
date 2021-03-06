@@ -19,6 +19,7 @@ forgetPassword.addEventListener("click", async function (e) {
     }
   } catch (error) {
     console.log(error);
+    message.innerHTML = "Enter Valid Email";
   }
 });
 

@@ -56,21 +56,6 @@ a {
   text-align: center;
 }
 
-/* .social-container {
-  margin: 20px 0;
-}
-
-.social-container a {
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 5px;
-  height: 40px;
-  width: 40px;
-} */
-
 .form-container input {
   background: #eee;
   border: none;
@@ -107,6 +92,9 @@ button.ghost {
 }
 .signupBtn{
   margin-top: 5%;
+}
+.loginBtn{
+  margin-top: 10%;
 }
 .forgetPassword{
   cursor: pointer;
