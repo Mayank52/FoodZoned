@@ -1,10 +1,9 @@
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
-} 
-body{
-    background-color: #1e2022;
-
+}
+body {
+  background-color: #1e2022;
 }
 
 hr {
@@ -37,11 +36,12 @@ hr {
   color: white;
   padding: 2%;
   overflow-y: scroll;
+  background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
 }
 .plan-nav h1 {
   margin-bottom: 5%;
 }
-.plan-nav i{
+.plan-nav i {
   margin-right: 4%;
 }
 .details {
@@ -70,7 +70,7 @@ hr {
 /* .plan-item:hover {
   color: #fff;
 } */
-.plan-item i{
+.plan-item i {
   display: none;
 }
 .img-preview {
@@ -226,7 +226,7 @@ hr {
 /* .active {
   color: #fff;
 } */
-.active i{
+.active i {
   display: block;
 }
 .add-review {
@@ -245,9 +245,9 @@ hr {
   border: 2px solid #f63854;
   background: white;
   color: #f63854;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
-.add-review button:hover{
+.add-review button:hover {
   background-color: #f63854;
   color: #fff;
 }
