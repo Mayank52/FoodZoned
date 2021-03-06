@@ -13,8 +13,8 @@ forgetPassword.addEventListener("click", async function (e) {
         { email: email.value }
       );
       console.log(obj);
-    }
-    else{
+      message.innerHTML = "Reset Link sent to Email";
+    } else {
       message.innerHTML = "Enter Valid Email";
     }
   } catch (error) {
@@ -26,10 +26,13 @@ loginBtn.addEventListener("click", async function (e) {
   try {
     e.preventDefault(); // prevent page refresh
     if (email.value && pw.value) {
-      let obj = await axios.post("https://foodzoned--app.herokuapp.com/api/user/login", {
-        email: email.value,
-        password: pw.value,
-      });
+      let obj = await axios.post(
+        "https://foodzoned--app.herokuapp.com/api/user/login",
+        {
+          email: email.value,
+          password: pw.value,
+        }
+      );
       console.log(obj);
       if (obj.data.data) {
         window.location.href = "/";
