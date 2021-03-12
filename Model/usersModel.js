@@ -15,6 +15,12 @@ let userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  contact: {
+    type: Number,
+  },
+  address: {
+    type: String,
+  },
   email: {
     type: String,
     required: true,
