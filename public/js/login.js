@@ -12,7 +12,7 @@ forgetPassword.addEventListener("click", async function (e) {
         "https://foodzoned--app.herokuapp.com/api/user/forgetpassword",
         { email: email.value }
       );
-      console.log(obj);
+      // console.log(obj);
       message.innerHTML = "Reset Link sent to Email";
     } else {
       message.innerHTML = "Enter Valid Email";
@@ -34,7 +34,7 @@ loginBtn.addEventListener("click", async function (e) {
           password: pw.value,
         }
       );
-      console.log(obj);
+      // console.log(obj);
       if (obj.data.data) {
         window.location.href = "/";
       } else {

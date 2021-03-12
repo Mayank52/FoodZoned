@@ -12,7 +12,6 @@ sendMessageBtn.addEventListener("click", async (e) => {
   let source = findInput.value;
   let feedback = feedbackInput.value;
   let checkbox = checkboxInput.checked;
-  console.log(checkboxInput.checked);
   try {
     if (checkbox && email && feedback) {
       let messageBody = {
@@ -32,7 +31,6 @@ sendMessageBtn.addEventListener("click", async (e) => {
         "Thank you for your time. We will get back to you soon!";
     } else {
       messageDiv.innerHTML = "Enter all Required Fields";
-      console.log("Enter all Required fields");
     }
   } catch (err) {
     console.log(err);

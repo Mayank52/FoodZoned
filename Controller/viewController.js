@@ -1,6 +1,7 @@
 const planModel = require("../Model/plansModel");
 const reviewModel = require("../Model/reviewModel");
 const bookingModel = require("../Model/bookingModel");
+const userModel = require("../Model/usersModel");
 
 async function getHomePage(req, res) {
   try {
@@ -67,6 +68,17 @@ async function getReviewsPage(req, res) {
   }
 }
 
+async function getCheckoutPage(req, res) {
+  try {
+    let userId = req.user._id;
+    let userObj = await userModel.find({ _id: userId }).exec();
+
+    res.render("checkout.pug", { name: req.name, user:userObj[0] });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 module.exports.getHomePage = getHomePage;
 module.exports.getLoginPage = getLoginPage;
 module.exports.getSignUpPage = getSignUpPage;
@@ -74,3 +86,4 @@ module.exports.getPlansPage = getPlansPage;
 module.exports.getResetPasswordPage = getResetPasswordPage;
 module.exports.getProfilePage = getProfilePage;
 module.exports.getReviewsPage = getReviewsPage;
+module.exports.getCheckoutPage = getCheckoutPage;

@@ -11,9 +11,9 @@ let initialDetails = [];
 
 profileNav.addEventListener("click", (e) => {
   let item = e.target.id;
-  console.log(item);
+  // console.log(item);
   let obj = document.querySelector(`.${item}`);
-  console.log(obj);
+  // console.log(obj);
 
   profile.classList.remove("hide");
   orders.classList.remove("hide");
@@ -41,11 +41,11 @@ saveDetails.addEventListener("click", async () => {
       name: profileInput[0].value,
       email: profileInput[1].value,
     };
-    console.log("Update:", updateObj);
+    // console.log("Update:", updateObj);
     let obj = await axios.patch("https://foodzoned--app.herokuapp.com/api/user", {
       updateObj,
     });
-    console.log("Updated obj: ", obj);
+    // console.log("Updated obj: ", obj);
     if (obj.data.message) window.location.reload();
 
     //Make them readonly
@@ -76,7 +76,7 @@ function saveInputValues() {
     initialDetails[i] = profileInput[i].value;
   }
 
-  console.log("Initial Details:", initialDetails);
+  // console.log("Initial Details:", initialDetails);
 }
 
 saveInputValues();

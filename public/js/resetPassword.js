@@ -5,18 +5,17 @@ let message = document.querySelector(".message");
 
 resetBtn.addEventListener("click", async (e) => {
   e.preventDefault();
-  console.log("Clicked");
   let newVal = newPw.value;
   let confirmVal = confirmPw.value;
   if (newVal === confirmVal) {
     let pathname = window.location.href.split("/");
     let token = pathname[pathname.length - 1];
-    console.log(token);
+    // console.log(token);
     let obj = await axios.patch(
       `https://foodzoned--app.herokuapp.com/api/user/resetpassword/${token}`,
       { password: newVal, confirmPassword: confirmVal }
     );
-    console.log(obj);
+    // console.log(obj);
     message.innerHTML = obj.data.message;
   } else {
     console.log("New and confirm password values dont match!!!");

@@ -15,19 +15,19 @@ addReviewBtn.addEventListener("click", async (e) => {
       //Currently selected plan has a active class
       let selectedPlan = document.querySelector(".plan-item.active");
       let planId = selectedPlan.id;
-      console.log(review, rating, planId);
+      // console.log(review, rating, planId);
       let newReviewObj = {
         planId: planId,
         review: review,
         rating: rating,
       };
 
-      console.log(newReviewObj);
+      // console.log(newReviewObj);
       let reviewObj = await axios.post(
         "https://foodzoned--app.herokuapp.com/api/review",
         newReviewObj
       );
-      console.log(reviewObj);
+      // console.log(reviewObj);
 
       //update new review in UI
       window.location.reload();

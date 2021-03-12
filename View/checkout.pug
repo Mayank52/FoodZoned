@@ -1,0 +1,21 @@
+extends base.pug
+
+block stylesheets
+  link(rel="stylesheet" , href="../css/style.css")
+  link(rel="stylesheet" , href="../css/checkout.css")
+
+block content
+  .overall-container
+    #container.container
+      .form-container.sign-in-container
+        form
+          h1 Enter Details          
+          input#name(type='text' placeholder='Full Name' class="" value=`${user.name}`)
+          input#email(type='text' placeholder='Email' class="" value=`${user.email}`)
+          input#contact(type='text' placeholder='Contact No' class="" )
+          input#address(type='text' placeholder='Delivery Address' class="" )
+          button.buy-plan Buy Plan
+        .message 
+block scripts
+  script(src="https://js.stripe.com/v3/")
+  script(src="../js/checkout.js")

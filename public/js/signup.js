@@ -19,7 +19,7 @@ signupBtn.addEventListener("click", async function (e) {
         "https://foodzoned--app.herokuapp.com/api/user/signup",
         signupObject
       );
-      console.log(obj);
+      // console.log(obj);
       window.location = "/login";
     }
   } catch (error) {

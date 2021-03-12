@@ -10,7 +10,7 @@ let lastSelectedPlan = planItems[0];
 
 planItems.forEach((planItem) => {
   planItem.addEventListener("click", (e) => {
-    console.log("planitem");
+    // console.log("planitem");
     let id = planItem.id;
 
     lastSelectedPlan.classList.remove("active");
@@ -25,9 +25,9 @@ async function setValues(id) {
   try {
     // let id = lastSelectedPlan.id;
     let planObj = await axios.get(`https://foodzoned--app.herokuapp.com/api/plans/${id}`);
-    console.log("Plan :", planObj);
+    // console.log("Plan :", planObj);
     let plan = planObj.data.data;
-    console.log(plan);
+    // console.log(plan);
 
     //add active class to selected plan
 
@@ -37,7 +37,7 @@ async function setValues(id) {
     price.innerHTML = `$${plan.price}`;
     buyPlanButton.setAttribute("planId", `${id}`);
     let starCount = plan.rating;
-    console.log("rating: ",plan.rating);
+    // console.log("rating: ",plan.rating);
     for (let i = 0; i < Math.floor(starCount); i++) {
       stars[i].style.color = "yellow";
     }
@@ -48,7 +48,7 @@ async function setValues(id) {
     let reviewObj = await axios.get(
       `https://foodzoned--app.herokuapp.com/api/review/plan/${id}`
     );
-    console.log(reviewObj);
+    // console.log(reviewObj);
     let reviews = reviewObj.data.data;
 
     if (reviews.length > 0) reviewsDiv.innerHTML = "";

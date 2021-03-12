@@ -10,17 +10,17 @@ let activeEditId = -1;
 deleteReviewBtns.forEach((deleteReviewBtn) => {
   deleteReviewBtn.addEventListener("click", async (e) => {
     try {
-      console.log(e.target);
+      // console.log(e.target);
       let reviewId = e.target.getAttribute("reviewid");
-      console.log(reviewId);
+      // console.log(reviewId);
       let deletedReviewObj = await axios.delete(
         `https://foodzoned--app.herokuapp.com/api/review/${reviewId}`
       );
-      console.log(deletedReviewObj);
+      // console.log(deletedReviewObj);
 
       let parentDiv = e.target.parentElement.parentElement;
       parentDiv.innerHTML = "Deleted!";
-      console.log(parentDiv);
+      // console.log(parentDiv);
     } catch (error) {
       console.log(error);
     }
@@ -92,7 +92,7 @@ saveReviewBtns.forEach((saveReviewBtn) => {
         `https://foodzoned--app.herokuapp.com/api/review/${reviewId}`,
         updateObj
       );
-      console.log(updatedReviewObj);
+      // console.log(updatedReviewObj);
         //update new review in UI
         window.location.reload();
     } catch (err) {
