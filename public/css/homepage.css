@@ -206,6 +206,7 @@ a {
   border-top: none;
   background: transparent;
   padding: 8%;
+  min-height: 100%;
   min-width: 100%;
 }
 .user-name {
@@ -406,7 +407,7 @@ textarea {
 .form-input.accept-terms {
   flex-direction: row;
 }
-.message{
+.message {
   color: #f63854;
   font-size: 1.2rem;
 }
